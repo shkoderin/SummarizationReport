@@ -1,4 +1,4 @@
-PWD /Users/alexandraklymenko/Desktop/LaTeX-Template
+PWD /Users/alexandraklymenko/Desktop/SummarizationReport
 INPUT /usr/local/texlive/2017/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -93,7 +93,6 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
 INPUT acl2018.bbl
 INPUT acl2018.bbl
-INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map

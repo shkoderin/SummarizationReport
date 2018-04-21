@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.9)  21 APR 2018 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.9)  21 APR 2018 18:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -241,20 +241,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 47.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) (./acl2018.bbl
-
-./acl2018.bbl:4: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 \end{thebibliography}
-                         
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-)
+) (./acl2018.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
  [1
 
@@ -269,18 +256,18 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
  )
 (\end occurred when \iffalse on line 349 was incomplete) 
 Here is how much of TeX's memory you used:
- 5749 strings out of 492995
- 82984 string characters out of 6132705
- 173279 words of memory out of 5000000
- 9269 multiletter control sequences out of 15000+600000
- 15496 words of font info for 40 fonts, out of 8000000 for 9000
+ 5747 strings out of 492995
+ 82960 string characters out of 6132705
+ 172279 words of memory out of 5000000
+ 9268 multiletter control sequences out of 15000+600000
+ 14989 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  35i,8n,37p,279b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on acl2018.pdf (1 page, 36619 bytes).
+Output written on acl2018.pdf (1 page, 36329 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
+ 30 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
