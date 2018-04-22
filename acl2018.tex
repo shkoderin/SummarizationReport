@@ -34,12 +34,12 @@
   Affiliation / Address line 1 \\
   Affiliation / Address line 2 \\
   Affiliation / Address line 3 \\
-  {\tt email@domain} \\\And
+  {\tt email@tum.de} \\\And
   Second Author \\
   Affiliation / Address line 1 \\
   Affiliation / Address line 2 \\
   Affiliation / Address line 3 \\
-  {\tt email@domain} \\}
+  {\tt email@tum.de} \\}
 
 \date{}
 
@@ -50,32 +50,45 @@ This paper provides an overview of the most prominent algorithms for automatic s
 \end{abstract}
 
 
-  \section{Introduction}
+\section{Introduction}
+With large amounts of text available online, the amount of which is growing rapidly everyday, summarizing this content becomes necessary to help users handle such information overload and better perceive information.
+Automatic summarization is the process of automatically shortening the content of an information source in a way that retains its most important information.
+The goal of summarizers is to produce concise and fluent summary which would allow people to understand the content of the input without reading the entire text.
+A good summary must be concise and fluent, capture all the important topics, but not contain repetitions of the same information.
 
-  With large amounts of text available online, the amount of which is growing rapidly everyday, summarizing this content becomes necessary to help users handle such information overload and better perceive information.
-  Automatic summarization is the process of automatically shortening the content of an information source in a way that retains its most important information.
-  The goal of summarizers is to produce concise and fluent summary which would allow people to understand the content of the input without reading the entire text.
-  A good summary must be concise and fluent, capture all the important topics, but not contain repetitions of the same information.
+For a long time extractive techniques of text summarization have been the primary focus of research in the field.
+However, in the past years there have been less major advances in extractive text summarization.
+The alternative approach of abstractive summarization...
 
-  For a long time extractive techniques of text summarization have been the primary focus of research in the field.
-  However, in the past years there have been less major advances in extractive text summarization.
-  The alternative approach of abstractive summarization...
+\section{Extractive methods}
+Extractive summarization methods produce summaries by concatenating several sentences (text units) from the text being summarized exactly as they occur.
+The main task of such systems is to determine which sentences are important and should therefore be included in the summary.
+For many years extractive methods have been the main focus of researchers in the text summarization community.
 
-  \section{Extractive methods}
-  Extractive summarization methods produce summaries by concatenating several sentences (text units) from the text being summarized exactly as they occur.
-  The main task of such systems is to determine which sentences are important and should therefore be included in the summary.
-  For many years extractive methods have been the main focus of researchers in the text summarization community.
+In \cite{yousefi2017text} researchers present methods of extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
 
-  In the past years there has not been any substantial advancements in extractive text summarization, most publications only proposed some small improvements to the already long-existing extractive methods.
-  Researchers \cite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
+In the past years there has not been any substantial advancements in extractive text summarization, most publications only proposed some small improvements to the already long-existing extractive methods.
+Researchers \cite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
 
-  \section{Abstractive methods}
-  When people produce summaries, in order to make them optimal in terms of content and linguistic quality, they tend to edit the text rather than just copy sentences from it as they are.
-  In order to emulate this process, generation of abstractive summaries is necessary.
-  Abstractive summarization methods produce summaries by rewriting the content in an input, as opposed to extractive methods that simply extract and concatenate important text units from it.
-  Abstractive summarization requires a deeper semantic and discourse interpretation of the text, as well as a novel text generation process.
+\section{Abstractive methods}
+When people produce summaries, in order to make them optimal in terms of content and linguistic quality, they tend to edit the text rather than just copy sentences from it as they are.
+In order to emulate this process, generation of abstractive summaries is necessary.
+Abstractive summarization methods produce summaries by rewriting the content in an input, as opposed to extractive methods that simply extract and concatenate important text units from it.
+Therefore, abstractive summarization requires a deeper semantic and discourse interpretation of the text, as well as a novel text generation process.
 
-  \section{Evaluation methods}
+Researchers at Facebook \cite{rush2015neural} presented a fully data-driven approach to abstractive sentence summarization.
+Their method utilizes neural attention-based model that generates each word of the summary conditioned on the input sentence.
+They combine this probabilistic model with a generation algorithm which produces accurate abstractive summaries.
+In later work \cite{chopra2016abstractive} they extended their model to a recurrent neural network architecture.
+The modified model showed to significantly outperform the previous state-of-the-art on both Gigaword data and the DUC-2004 challenge.
+
+Researchers at IBM \cite{nallapati2016abstractive} modeled abstractive text summarization using Attentional Encoder-Decoder Recurrent Neural Networks, that was originally developed for machine translation to summarization and showed that this approach already outperformed state-of-the-art systems on two different English corpora.
+To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
+In addition, they proposed a new dataset for multi sentence document summarization and established benchmark numbers on it.
+
+Both approaches are currently the state-of-the-art on the DUC competition.
+
+\section{Evaluation methods}
 
 
 % include your own bib file like this:

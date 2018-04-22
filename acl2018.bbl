@@ -1,10 +1,35 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{5}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Chopra et~al.(2016)Chopra, Auli, and Rush}]{chopra2016abstractive}
+Sumit Chopra, Michael Auli, and Alexander~M Rush. 2016.
+\newblock Abstractive sentence summarization with attentive recurrent neural
+  networks.
+\newblock In \emph{Proceedings of the 2016 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies}, pages 93--98.
 
 \bibitem[{Mehta(2016)}]{mehta2016extractive}
 Parth Mehta. 2016.
 \newblock From extractive to abstractive summarization: a journey.
 \newblock In \emph{Proceedings of the ACL 2016 Student Research Workshop},
   pages 100--106.
+
+\bibitem[{Nallapati et~al.(2016)Nallapati, Zhou, Gulcehre, Xiang
+  et~al.}]{nallapati2016abstractive}
+Ramesh Nallapati, Bowen Zhou, Caglar Gulcehre, Bing Xiang, et~al. 2016.
+\newblock Abstractive text summarization using sequence-to-sequence rnns and
+  beyond.
+\newblock \emph{arXiv preprint arXiv:1602.06023}.
+
+\bibitem[{Rush et~al.(2015)Rush, Chopra, and Weston}]{rush2015neural}
+Alexander~M Rush, Sumit Chopra, and Jason Weston. 2015.
+\newblock A neural attention model for abstractive sentence summarization.
+\newblock \emph{arXiv preprint arXiv:1509.00685}.
+
+\bibitem[{Yousefi-Azar and Hamey(2017)}]{yousefi2017text}
+Mahmood Yousefi-Azar and Len Hamey. 2017.
+\newblock Text summarization using unsupervised deep learning.
+\newblock \emph{Expert Systems with Applications}, 68:93--105.
 
 \end{thebibliography}
