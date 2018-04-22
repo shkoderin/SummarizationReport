@@ -1,0 +1,10 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Mehta(2016)}]{mehta2016extractive}
+Parth Mehta. 2016.
+\newblock From extractive to abstractive summarization: a journey.
+\newblock In \emph{Proceedings of the ACL 2016 Student Research Workshop},
+  pages 100--106.
+
+\end{thebibliography}
