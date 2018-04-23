@@ -65,16 +65,23 @@ Extractive summarization methods produce summaries by concatenating several sent
 The main task of such systems is to determine which sentences are important and should therefore be included in the summary.
 For many years extractive methods have been the main focus of researchers in the text summarization community.
 
-In \cite{yousefi2017text} researchers present methods of extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
+In \cite{cheng2016neural} researchers presented a data-driven summarization framework based on neural networks and continuous sentence features.
+
+In \cite{yousefi2017text} researchers presented methods of extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
 
 In the past years there has not been any substantial advancements in extractive text summarization, most publications only proposed some small improvements to the already long-existing extractive methods.
 Researchers \cite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
 
 \section{Abstractive methods}
-When people produce summaries, in order to make them optimal in terms of content and linguistic quality, they tend to edit the text rather than just copy sentences from it as they are.
-In order to emulate this process, generation of abstractive summaries is necessary.
+The goal of automatic text summarization systems is to produce summaries as good as the ones created by humans.
+However, when people produce summaries, in order to make them optimal in terms of content and linguistic quality, they tend to edit the text rather than just copy sentences from it as they are.
+This is why, in order to emulate this process, generation of abstractive summaries is necessary.
 Abstractive summarization methods produce summaries by rewriting the content in an input, as opposed to extractive methods that simply extract and concatenate important text units from it.
 Therefore, abstractive summarization requires a deeper semantic and discourse interpretation of the text, as well as a novel text generation process.
+
+Very recently, there have been several breakthroughs in abstractive text summarization using deep learning.
+Most of the research relies on Sequence to Sequence Model \cite{sutskever2014sequence}, which was first introduced as Encoder-Decoder Model by \cite{cho2014learning} and later extended by \cite{bahdanau2014neural} with so-called "attention mechanism".
+Sequence to Sequence (or seq2seq) model manages text generation pretty well as it was originally developed for machine translation.
 
 Researchers at Facebook \cite{rush2015neural} presented a fully data-driven approach to abstractive sentence summarization.
 Their method utilizes neural attention-based model that generates each word of the summary conditioned on the input sentence.
@@ -82,13 +89,43 @@ They combine this probabilistic model with a generation algorithm which produces
 In later work \cite{chopra2016abstractive} they extended their model to a recurrent neural network architecture.
 The modified model showed to significantly outperform the previous state-of-the-art on both Gigaword data and the DUC-2004 challenge.
 
-Researchers at IBM \cite{nallapati2016abstractive} modeled abstractive text summarization using Attentional Encoder-Decoder Recurrent Neural Networks, that was originally developed for machine translation to summarization and showed that this approach already outperformed state-of-the-art systems on two different English corpora.
+Researchers at IBM \cite{nallapati2016abstractive} also modeled abstractive text summarization using attentional encoder-decoder recurrent neural networks.
 To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
-In addition, they proposed a new dataset for multi sentence document summarization and established benchmark numbers on it.
+One of the most interesting models is called "Switching Generator/Pointer". In this model, the decoder is equipped with a "switch" that decides between generating a new word based on the context or using a word from the input.
+In addition, in their work authors proposed a new dataset for multi sentence document summarization and established benchmark numbers on it.
+
+Google has also proposed a sequence-to-sequence with attention model for text summarization, which they called "textsum".
+As opposed to the IBM method, textsum uses LSTM cell...
 
 Both approaches are currently the state-of-the-art on the DUC competition.
 
 \section{Evaluation methods}
+In this section we provide an overview of the main evaluation methods that are currently used to assess and report results on automatic summarization.
+
+\subsection{Manual evaluation}
+There are two manual methods used at TAC: Pyramid and Responsiveness.
+Both these methods are focused at evaluating the informativeness and relevance of the summary content and do not assess its linguistic quality.
+
+The Pyramid method \cite{nenkova2007pyramid} is based on the semantic analysis of multiple human models, which, taken together, according to the authors' assumption, yield a gold-standard for system output.
+The method weights each Summary Content Unit (SCU) based on the number of human summaries in which it occurred.
+The Pyramid score, which ranges from 0 to 1 and represents the informativeness of the summary, is equal to the ratio between the total SCUs weights in the created summary and the weight of an optimal summary with the same number of SCUs.
+
+The Responsiveness metric is defined for query focused summarization.
+For this evaluation, human reviewers are given a query and a summary and are asked to rate on a scale from 1 to 5 how good the summary is in terms of providing the requested information.
+
+\subsection{Automatic evaluation}
+Manual evaluations require a lot of time and effort, and are very expensive and difficult to conduct on a regular basis.
+
+BLEU \cite{papineni2002bleu}.
+
+The most widely used automatic summarization evaluation measure for text summarization which is now standardly used to report results in research papers is called ROUGE (Recall-Oriented Understudy for Gisting Evaluation) \cite{lin2004rouge}.
+ROUGE is cheap and fast,
+
+One of the main problems of ROUGE is that it relies purely on lexical overlaps, which can significantly underrate summarization score, especially in documents that have a lot of synonyms, terminology variations and paraphrasing.
+Motivated by this observation, \cite{cohan2016revisiting} conducted a detailed  analysis of ROUGE’s effectiveness for evaluation of scientific summaries.
+In their results, ROUGE showed to be unreliable for evaluation of these types of summaries, with different ROUGE variations producing different correlations with the pyramid scores.
+The authors propose a new metric for summarization evaluation called SERA (Summarization Evaluation by Relevance Analysis), which is based on the content relevance between automatically generated summary and the corresponding manual summaries, written by human annotators.
+The newly proposed metric proved to be effective in evaluating summaries of scientific articles, consistently achieving hight correlations with manual scores.
 
 
 % include your own bib file like this:

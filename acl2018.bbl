@@ -1,5 +1,24 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{13}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Bahdanau et~al.(2014)Bahdanau, Cho, and Bengio}]{bahdanau2014neural}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2014.
+\newblock Neural machine translation by jointly learning to align and
+  translate.
+\newblock \emph{arXiv preprint arXiv:1409.0473}.
+
+\bibitem[{Cheng and Lapata(2016)}]{cheng2016neural}
+Jianpeng Cheng and Mirella Lapata. 2016.
+\newblock Neural summarization by extracting sentences and words.
+\newblock \emph{arXiv preprint arXiv:1603.07252}.
+
+\bibitem[{Cho et~al.(2014)Cho, Van~Merri{\"e}nboer, Gulcehre, Bahdanau,
+  Bougares, Schwenk, and Bengio}]{cho2014learning}
+Kyunghyun Cho, Bart Van~Merri{\"e}nboer, Caglar Gulcehre, Dzmitry Bahdanau,
+  Fethi Bougares, Holger Schwenk, and Yoshua Bengio. 2014.
+\newblock Learning phrase representations using rnn encoder-decoder for
+  statistical machine translation.
+\newblock \emph{arXiv preprint arXiv:1406.1078}.
 
 \bibitem[{Chopra et~al.(2016)Chopra, Auli, and Rush}]{chopra2016abstractive}
 Sumit Chopra, Michael Auli, and Alexander~M Rush. 2016.
@@ -8,6 +27,16 @@ Sumit Chopra, Michael Auli, and Alexander~M Rush. 2016.
 \newblock In \emph{Proceedings of the 2016 Conference of the North American
   Chapter of the Association for Computational Linguistics: Human Language
   Technologies}, pages 93--98.
+
+\bibitem[{Cohan and Goharian(2016)}]{cohan2016revisiting}
+Arman Cohan and Nazli Goharian. 2016.
+\newblock Revisiting summarization evaluation for scientific articles.
+\newblock \emph{arXiv preprint arXiv:1604.00400}.
+
+\bibitem[{Lin(2004)}]{lin2004rouge}
+Chin-Yew Lin. 2004.
+\newblock Rouge: A package for automatic evaluation of summaries.
+\newblock \emph{Text Summarization Branches Out}.
 
 \bibitem[{Mehta(2016)}]{mehta2016extractive}
 Parth Mehta. 2016.
@@ -22,10 +51,33 @@ Ramesh Nallapati, Bowen Zhou, Caglar Gulcehre, Bing Xiang, et~al. 2016.
   beyond.
 \newblock \emph{arXiv preprint arXiv:1602.06023}.
 
+\bibitem[{Nenkova et~al.(2007)Nenkova, Passonneau, and
+  McKeown}]{nenkova2007pyramid}
+Ani Nenkova, Rebecca Passonneau, and Kathleen McKeown. 2007.
+\newblock The pyramid method: Incorporating human content selection variation
+  in summarization evaluation.
+\newblock \emph{ACM Transactions on Speech and Language Processing (TSLP)},
+  4(2):4.
+
+\bibitem[{Papineni et~al.(2002)Papineni, Roukos, Ward, and
+  Zhu}]{papineni2002bleu}
+Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. 2002.
+\newblock Bleu: a method for automatic evaluation of machine translation.
+\newblock In \emph{Proceedings of the 40th annual meeting on association for
+  computational linguistics}, pages 311--318. Association for Computational
+  Linguistics.
+
 \bibitem[{Rush et~al.(2015)Rush, Chopra, and Weston}]{rush2015neural}
 Alexander~M Rush, Sumit Chopra, and Jason Weston. 2015.
 \newblock A neural attention model for abstractive sentence summarization.
 \newblock \emph{arXiv preprint arXiv:1509.00685}.
+
+\bibitem[{Sutskever et~al.(2014)Sutskever, Vinyals, and
+  Le}]{sutskever2014sequence}
+Ilya Sutskever, Oriol Vinyals, and Quoc~V Le. 2014.
+\newblock Sequence to sequence learning with neural networks.
+\newblock In \emph{Advances in neural information processing systems}, pages
+  3104--3112.
 
 \bibitem[{Yousefi-Azar and Hamey(2017)}]{yousefi2017text}
 Mahmood Yousefi-Azar and Len Hamey. 2017.
