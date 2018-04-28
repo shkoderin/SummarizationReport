@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex acl2018"] 1524498848 "acl2018.aux" "acl2018.bbl" "acl2018" 1524498999
+["bibtex acl2018"] 1524944641 "acl2018.aux" "acl2018.bbl" "acl2018" 1524944641
   "./acl_natbib.bst" 1518954773 47566 8107573a443aca442602b8e9bbe11c23 ""
-  "acl2018.aux" 1524498999 2154 5b9eadc205ff46708cd2c001f41585b5 ""
-  "acl2018.bib" 1524497739 4734 adc648e00210369f804fc42204af0386 ""
+  "acl2018.aux" 1524944641 2901 a6fc6c7cdef79724b1120b52e60511d9 ""
+  "acl2018.bib" 1524944634 6740 aad7b8de2ab17ea3cd37347b5e59471f ""
   (generated)
-  "acl2018.blg"
   "acl2018.bbl"
-["pdflatex"] 1524498998 "acl2018.tex" "acl2018.pdf" "acl2018" 1524498999
+  "acl2018.blg"
+["pdflatex"] 1524944641 "acl2018.tex" "acl2018.pdf" "acl2018" 1524944641
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1480098688 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -29,8 +29,11 @@
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1480098701 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1480098701 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm" 1480098711 520 82a3d37183f34b6eb363a161dfc002c2 ""
+  "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm" 1480098711 520 d082ac03a1087bc1ec2a06e24a9f68c0 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm" 1480098711 520 4889cce2180234b97cad636b6039c722 ""
+  "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm" 1480098711 520 a74c6ed8cb48679fdc3ea874d9d34a7e ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm" 1480098711 520 7bb3abb160b19e0ed6ac404bb59052b7 ""
+  "/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1480098733 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb" 1480098746 45758 19968a0990191524e34e1994d4a31cb6 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1480098746 44729 811d6c62865936705a31c797a1d5dada ""
   "/usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1480098746 46026 6dab18b61c907687b520c72847215a68 ""
@@ -60,6 +63,7 @@
   "/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty" 1480098836 3834 4363110eb0ef1eb2b71c8fcbcdb6c357 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty" 1480098836 22417 1d9df1eb66848aa31b18a593099cf45c ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty" 1480098836 9581 023642318cef9f4677efe364de1e2a27 ""
+  "/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsptm.fd" 1480098837 576 95c2c0baea9c719a4be29a3d4122498b ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd" 1480098837 985 1ed784d7bfe47179f3550d2303b073f8 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd" 1480098837 961 15056f4a61917ceed3a44e4ac11fcc52 ""
   "/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/times.sty" 1480098837 857 6c716f26c5eadfb81029fcd6ce2d45e6 ""
@@ -69,13 +73,13 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1515527831 4129591 e0967916072af9fa6db55717a4139f66 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "acl2018.aux" 1524498999 2154 5b9eadc205ff46708cd2c001f41585b5 ""
-  "acl2018.bbl" 1524498848 3860 ef680d9fc71cdd77c915c87221715287 "bibtex acl2018"
-  "acl2018.out" 1524498998 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "acl2018.aux" 1524944641 2901 a6fc6c7cdef79724b1120b52e60511d9 ""
+  "acl2018.bbl" 1524944641 5845 256c50c022acf64e2449b479c4494ec5 "bibtex acl2018"
+  "acl2018.out" 1524944641 0 d41d8cd98f00b204e9800998ecf8427e ""
   "acl2018.sty" 1522157149 20908 bdf5ee331c0fe3b0fe7e186d0d0897f6 ""
-  "acl2018.tex" 1524498994 9462 37d4fc038622a15d0e5d37d6a1ac1543 ""
+  "acl2018.tex" 1524944637 12514 f9190716c4cacf5bf531f1befd462bac ""
   (generated)
+  "acl2018.out"
   "acl2018.log"
   "acl2018.aux"
   "acl2018.pdf"
-  "acl2018.out"

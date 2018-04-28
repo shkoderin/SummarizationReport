@@ -46,7 +46,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-This paper provides an overview of the most prominent algorithms for automatic summarization.
+This paper provides an overview of the most prominent algorithms for automatic summarization that were proposed in the last years.
 \end{abstract}
 
 
@@ -58,6 +58,7 @@ A good summary must be concise and fluent, capture all the important topics, but
 
 For a long time extractive techniques of text summarization have been the primary focus of research in the field.
 However, in the past years there have been less major advances in extractive text summarization.
+Most of the research in this area proposes either an enhancement of one of the available extractive approaches, or an ensemble of several previously known extractive methods.
 The alternative approach of abstractive summarization...
 
 \section{Extractive methods}
@@ -66,10 +67,18 @@ The main task of such systems is to determine which sentences are important and 
 For many years extractive methods have been the main focus of researchers in the text summarization community.
 
 In \cite{cheng2016neural} researchers presented a data-driven summarization framework based on neural networks and continuous sentence features.
+They develop data-driven single-document summarization framework based on an hierarchical document encoder and an attention-based extractor.
+Such architecture enables development of different classes of summarization models which can extract sentences or words.
+The models can be trained on large scale datasets and learn informativeness features based on continuous representations without any access to linguistic annotation.
+The authors tested their approach on two datasets and demonstrated results that are
+comparable to the state of the art.
 
 In \cite{yousefi2017text} researchers presented methods of extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
+The presented approach is completely unsupervised and does not require queries for any stage of training.
+Smaller local vocabularies, comparing to other methods, allow to reduce the training and deployment computational costs and thus make the approach more suitable for implementation on mobile devices.
+The authors perform experiments on two email corpora designed for text summarization and observe results that are much better than those of other unsupervised extractive email summarisation techniques and are comparable to the best supervised approaches.
 
-In the past years there has not been any substantial advancements in extractive text summarization, most publications only proposed some small improvements to the already long-existing extractive methods.
+Otherwise, in the past years there has not been any substantial advancements in extractive text summarization, most publications only proposed some small improvements to the already long-existing extractive methods.
 Researchers \cite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
 
 \section{Abstractive methods}
@@ -88,6 +97,7 @@ Their method utilizes neural attention-based model that generates each word of t
 They combine this probabilistic model with a generation algorithm which produces accurate abstractive summaries.
 In later work \cite{chopra2016abstractive} they extended their model to a recurrent neural network architecture.
 The modified model showed to significantly outperform the previous state-of-the-art on both Gigaword data and the DUC-2004 challenge.
+In addition to the paper, the source code \cite{Namas2015Facebook} was also provided to the public. 
 
 Researchers at IBM \cite{nallapati2016abstractive} also modeled abstractive text summarization using attentional encoder-decoder recurrent neural networks.
 To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
@@ -95,15 +105,29 @@ One of the most interesting models is called "Switching Generator/Pointer". In t
 In addition, in their work authors proposed a new dataset for multi sentence document summarization and established benchmark numbers on it.
 
 Google has also proposed a sequence-to-sequence with attention model for text summarization, which they called "textsum".
-As opposed to the IBM method, textsum uses LSTM cell...
+The researchers did not provide a paper in support of their work, but openly published the source code \cite{LiuGoogle2016} at a hosting service.
 
-Both approaches are currently the state-of-the-art on the DUC competition.
+Both approaches are currently the state-of-the-art on the DUC/TAC competition.
+
+\cite{see2017get}
+
+\section{Query-focused summarization}
+Query-focused summarization became a task in DUC in 2004 in response to researchers' claims that generic summarization is too unconstrained and does not consider special user needs.
+Such summarization allows to use more sophisticated, targeted approaches that integrate methods that seek specific types of information with data-driven, generic methods \cite{nenkova2011automatic}.
+
+\cite{wang2016sentence}
+
+\cite{litvak2017query}
+
+In their work, \cite{nema2017diversity} present a model for query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims mitigate the drawback of generating repeated phrases in the summary.
+
+\section{APIs}
 
 \section{Evaluation methods}
 In this section we provide an overview of the main evaluation methods that are currently used to assess and report results on automatic summarization.
 
 \subsection{Manual evaluation}
-There are two manual methods used at TAC: Pyramid and Responsiveness.
+There are two manual methods used at TAC (Text Analysis Conference): Pyramid and Responsiveness.
 Both these methods are focused at evaluating the informativeness and relevance of the summary content and do not assess its linguistic quality.
 
 The Pyramid method \cite{nenkova2007pyramid} is based on the semantic analysis of multiple human models, which, taken together, according to the authors' assumption, yield a gold-standard for system output.
@@ -116,10 +140,17 @@ For this evaluation, human reviewers are given a query and a summary and are ask
 \subsection{Automatic evaluation}
 Manual evaluations require a lot of time and effort, and are very expensive and difficult to conduct on a regular basis.
 
-BLEU \cite{papineni2002bleu}.
-
 The most widely used automatic summarization evaluation measure for text summarization which is now standardly used to report results in research papers is called ROUGE (Recall-Oriented Understudy for Gisting Evaluation) \cite{lin2004rouge}.
-ROUGE is cheap and fast,
+ROUGE was inspired by BLEU \cite{papineni2002bleu}, evaluation measure that was developed for machine translation evaluation.
+The measure is based on the overlap of units such as n-gram, word sequences, and word pairs in the automatic summary and the optimal manual summaries created by annotators.
+ROUGE is cheap and fast, and, unlike BLEU, that is oriented at precision, which is overly strict, ROUGE is recall-based, which makes it more preferable for summarization evaluation.
+
+There are several variations of ROUGE. Below we shortly describe the ones that are most commonly used.
+\begin{itemize}
+\item ROUGE-n
+\item ROUGE-L
+\item ROUGE-SU
+\end{itemize}
 
 One of the main problems of ROUGE is that it relies purely on lexical overlaps, which can significantly underrate summarization score, especially in documents that have a lot of synonyms, terminology variations and paraphrasing.
 Motivated by this observation, \cite{cohan2016revisiting} conducted a detailed  analysis of ROUGE’s effectiveness for evaluation of scientific summaries.
