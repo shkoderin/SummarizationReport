@@ -62,7 +62,7 @@ Most of the research in this area proposes either an enhancement of one of the a
 The alternative approach of abstractive summarization...
 
 There is a number of scientific works \cite{nenkova2011automatic, lloret2012text, saggion2013automatic} that provide an extensive overview of different automatic summarization methods that were proposed ever since the publication of the first paper on the topic by \cite{luhn1958automatic}.
-In this paper, we focus on the most prominent algorithms that were proposed in the last several years and are currently considered to be state-of-the-art, as well as describe the techniques for summarization evaluation which are currently standardly used for assesment of these algorithms.
+In our paper, we focus on the most prominent algorithms that were proposed in the last several years and are currently considered to be state-of-the-art, as well as describe the techniques for summarization evaluation which are currently standardly used for assesment of these algorithms.
 
 
 \section{Extractive methods}
@@ -96,12 +96,17 @@ Very recently, there have been several breakthroughs in abstractive text summari
 Most of the research relies on Sequence to Sequence Model \cite{sutskever2014sequence}, which was first introduced as Encoder-Decoder Model by \cite{cho2014learning} and later extended by \cite{bahdanau2014neural} with so-called "attention mechanism".
 Sequence to Sequence (or seq2seq) model manages text generation pretty well as it was originally developed for machine translation.
 
-Researchers at Facebook \cite{rush2015neural} presented a fully data-driven approach to abstractive sentence summarization.
+A group of researchers at Facebook \cite{rush2015neural} presented a fully data-driven approach to abstractive sentence summarization.
 Their method utilizes neural attention-based model that generates each word of the summary conditioned on the input sentence.
 They combine this probabilistic model with a generation algorithm which produces accurate abstractive summaries.
-In later work \cite{chopra2016abstractive} they extended their model to a recurrent neural network architecture.
-The modified model showed to significantly outperform the previous state-of-the-art on both Gigaword data and the DUC-2004 challenge.
+The attention-based model provides less linguistic structure comparing to other abstractive summarization approaches, but is easily scalable for training on large amounts of data.
+Furtermore, the lack of vocabulary constraints in the system makes it possible to train the model on diverse input-output pairs.
 In addition to the paper, the source code \cite{Namas2015Facebook} was also provided to the public.
+
+In later work \cite{chopra2016abstractive} researchers at Facebook extended their model to a recurrent neural network architecture.
+The new model includes a more sophisticated encoder which explicitly encodes the position of the input words and uses convolutional network to encode input words.
+With these modifications, the model showed to significantly outperform the previously proposed system on the Gigaword corpus and perform competitively on the DUC-2004 task.
+Authors explain the distinctive improvement by the difference between tokenization of DUC-2004 and their training corpus, as well as by the fact that headlines in Gigaword are much shorter than in DUC-2004.
 
 Researchers at IBM \cite{nallapati2016abstractive} also modeled abstractive text summarization using attentional encoder-decoder recurrent neural networks.
 To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
@@ -123,7 +128,7 @@ Such summarization allows to use more sophisticated, targeted approaches that in
 For sentence ranking, authors experiment with two ranking algorithms - Support Vector Regression (SVR) \cite{mozer1997} and LambdaMART \cite{burges2007learning}.
 For sentence compression, which is the main focus of their work, they examine three different approaches to sentence-compression of their own design: rule-based, sequence-based and tree-based.
 Finally, in the post-processing step, coreference resolution and sentence ordering are performed.
-All of the proposed models show substantial improvement over pure extraction-based approaches for query-based MDS, with the best-performing system yielding an 11.02 ROUGE-2 score.
+All of the proposed models show substantial improvement over pure extraction-based approaches for query-based MDS, with the best-performing system yielding an 11.02 ROUGE-2 score on the DUC 2006 dataset.
 
 In \cite{litvak2017query} authors continued their earlier work \cite{litvak2015krimping} of applying the Minimum Description Length (MDL) principle for generic summarization by constructing a model where frequent word sets depend on the query.
 
