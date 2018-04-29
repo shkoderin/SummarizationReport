@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{26}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Bahdanau et~al.(2014)Bahdanau, Cho, and Bengio}]{bahdanau2014neural}
@@ -6,6 +6,12 @@ Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2014.
 \newblock Neural machine translation by jointly learning to align and
   translate.
 \newblock \emph{arXiv preprint arXiv:1409.0473}.
+
+\bibitem[{Burges et~al.(2007)Burges, Ragno, and Le}]{burges2007learning}
+Christopher~J Burges, Robert Ragno, and Quoc~V Le. 2007.
+\newblock Learning to rank with nonsmooth cost functions.
+\newblock In \emph{Advances in neural information processing systems}, pages
+  193--200.
 
 \bibitem[{Cheng and Lapata(2016)}]{cheng2016neural}
 Jianpeng Cheng and Mirella Lapata. 2016.
@@ -38,6 +44,12 @@ Chin-Yew Lin. 2004.
 \newblock Rouge: A package for automatic evaluation of summaries.
 \newblock \emph{Text Summarization Branches Out}.
 
+\bibitem[{Litvak et~al.(2015)Litvak, Last, and Vanetik}]{litvak2015krimping}
+Marina Litvak, Mark Last, and Natalia Vanetik. 2015.
+\newblock Krimping texts for better summarization.
+\newblock In \emph{Proceedings of the 2015 Conference on Empirical Methods in
+  Natural Language Processing}, pages 1931--1935.
+
 \bibitem[{Litvak and Vanetik(2017)}]{litvak2017query}
 Marina Litvak and Natalia Vanetik. 2017.
 \newblock Query-based summarization using mdl principle.
@@ -51,11 +63,26 @@ Xin Pan~Peter Liu. 2016.
 \newblock
   \url{https://github.com/tensorflow/models/tree/master/research/textsum}.
 
+\bibitem[{Lloret and Palomar(2012)}]{lloret2012text}
+Elena Lloret and Manuel Palomar. 2012.
+\newblock Text summarisation in progress: a literature review.
+\newblock \emph{Artificial Intelligence Review}, 37(1):1--41.
+
+\bibitem[{Luhn(1958)}]{luhn1958automatic}
+Hans~Peter Luhn. 1958.
+\newblock The automatic creation of literature abstracts.
+\newblock \emph{IBM Journal of research and development}, 2(2):159--165.
+
 \bibitem[{Mehta(2016)}]{mehta2016extractive}
 Parth Mehta. 2016.
 \newblock From extractive to abstractive summarization: a journey.
 \newblock In \emph{Proceedings of the ACL 2016 Student Research Workshop},
   pages 100--106.
+
+\bibitem[{Mozer et~al.(1997)Mozer, Jordan, and Petsche}]{mozer1997}
+Michael Mozer, Michael~I. Jordan, and Thomas Petsche, editors. 1997.
+\newblock \emph{Advances in Neural Information Processing Systems 9, NIPS,
+  Denver, CO, USA, December 2-5, 1996}. {MIT} Press.
 
 \bibitem[{Nallapati et~al.(2016)Nallapati, Zhou, Gulcehre, Xiang
   et~al.}]{nallapati2016abstractive}
@@ -104,6 +131,12 @@ Alexander~M Rush, Sumit Chopra, and Jason Weston. 2015{\natexlab{a}}.
 Alexander~M Rush, Sumit Chopra, and Jason Weston. 2015{\natexlab{b}}.
 \newblock Neural attention model for abstractive summarization.
 \newblock \url{https://github.com/facebookarchive/NAMAS}.
+
+\bibitem[{Saggion and Poibeau(2013)}]{saggion2013automatic}
+Horacio Saggion and Thierry Poibeau. 2013.
+\newblock Automatic text summarization: Past, present and future.
+\newblock In \emph{Multi-source, multilingual information extraction and
+  summarization}, pages 3--21. Springer.
 
 \bibitem[{See et~al.(2017)See, Liu, and Manning}]{see2017get}
 Abigail See, Peter~J Liu, and Christopher~D Manning. 2017.

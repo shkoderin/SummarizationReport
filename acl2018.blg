@@ -8,44 +8,44 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acl2018.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 20 entries,
+You've used 26 entries,
             3573 wiz_defined-function locations,
-            797 strings with 9315 characters,
-and the built_in function-call counts, 13376 in all, are:
-= -- 1163
-> -- 645
-< -- 14
-+ -- 207
-- -- 180
-* -- 827
-:= -- 2043
-add.period$ -- 81
-call.type$ -- 20
-change.case$ -- 168
-chr.to.int$ -- 21
-cite$ -- 20
-duplicate$ -- 910
-empty$ -- 953
-format.name$ -- 242
-if$ -- 2924
+            833 strings with 10309 characters,
+and the built_in function-call counts, 17704 in all, are:
+= -- 1567
+> -- 802
+< -- 20
++ -- 257
+- -- 222
+* -- 1090
+:= -- 2653
+add.period$ -- 106
+call.type$ -- 26
+change.case$ -- 217
+chr.to.int$ -- 27
+cite$ -- 26
+duplicate$ -- 1209
+empty$ -- 1301
+format.name$ -- 304
+if$ -- 3904
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 177
-newline$ -- 104
-num.names$ -- 80
-pop$ -- 411
+missing$ -- 231
+newline$ -- 133
+num.names$ -- 105
+pop$ -- 538
 preamble$ -- 1
-purify$ -- 138
+purify$ -- 176
 quote$ -- 0
-skip$ -- 685
+skip$ -- 912
 stack$ -- 0
-substring$ -- 430
-swap$ -- 412
-text.length$ -- 5
+substring$ -- 630
+swap$ -- 562
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 180
+type$ -- 234
 warning$ -- 0
-while$ -- 80
+while$ -- 111
 width$ -- 0
-write$ -- 252
+write$ -- 329

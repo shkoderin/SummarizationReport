@@ -61,6 +61,10 @@ However, in the past years there have been less major advances in extractive tex
 Most of the research in this area proposes either an enhancement of one of the available extractive approaches, or an ensemble of several previously known extractive methods.
 The alternative approach of abstractive summarization...
 
+There is a number of scientific works \cite{nenkova2011automatic, lloret2012text, saggion2013automatic} that provide an extensive overview of different automatic summarization methods that were proposed ever since the publication of the first paper on the topic by \cite{luhn1958automatic}.
+In this paper, we focus on the most prominent algorithms that were proposed in the last several years and are currently considered to be state-of-the-art, as well as describe the techniques for summarization evaluation which are currently standardly used for assesment of these algorithms.
+
+
 \section{Extractive methods}
 Extractive summarization methods produce summaries by concatenating several sentences (text units) from the text being summarized exactly as they occur.
 The main task of such systems is to determine which sentences are important and should therefore be included in the summary.
@@ -97,7 +101,7 @@ Their method utilizes neural attention-based model that generates each word of t
 They combine this probabilistic model with a generation algorithm which produces accurate abstractive summaries.
 In later work \cite{chopra2016abstractive} they extended their model to a recurrent neural network architecture.
 The modified model showed to significantly outperform the previous state-of-the-art on both Gigaword data and the DUC-2004 challenge.
-In addition to the paper, the source code \cite{Namas2015Facebook} was also provided to the public. 
+In addition to the paper, the source code \cite{Namas2015Facebook} was also provided to the public.
 
 Researchers at IBM \cite{nallapati2016abstractive} also modeled abstractive text summarization using attentional encoder-decoder recurrent neural networks.
 To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
@@ -115,9 +119,13 @@ Both approaches are currently the state-of-the-art on the DUC/TAC competition.
 Query-focused summarization became a task in DUC in 2004 in response to researchers' claims that generic summarization is too unconstrained and does not consider special user needs.
 Such summarization allows to use more sophisticated, targeted approaches that integrate methods that seek specific types of information with data-driven, generic methods \cite{nenkova2011automatic}.
 
-\cite{wang2016sentence}
+\cite{wang2016sentence} investigate the role of sentence compression techniques for query-focused multi-document summarization (MDS) and present a respective framework consisting of three steps: Sentence Ranking, Sentence Compression and Post-processing.
+For sentence ranking, authors experiment with two ranking algorithms - Support Vector Regression (SVR) \cite{mozer1997} and LambdaMART \cite{burges2007learning}.
+For sentence compression, which is the main focus of their work, they examine three different approaches to sentence-compression of their own design: rule-based, sequence-based and tree-based.
+Finally, in the post-processing step, coreference resolution and sentence ordering are performed.
+All of the proposed models show substantial improvement over pure extraction-based approaches for query-based MDS, with the best-performing system yielding an 11.02 ROUGE-2 score.
 
-\cite{litvak2017query}
+In \cite{litvak2017query} authors continued their earlier work \cite{litvak2015krimping} of applying the Minimum Description Length (MDL) principle for generic summarization by constructing a model where frequent word sets depend on the query.
 
 In their work, \cite{nema2017diversity} present a model for query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims mitigate the drawback of generating repeated phrases in the summary.
 
