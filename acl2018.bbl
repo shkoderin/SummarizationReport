@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{28}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Bahdanau et~al.(2014)Bahdanau, Cho, and Bengio}]{bahdanau2014neural}
@@ -12,6 +12,12 @@ Christopher~J Burges, Robert Ragno, and Quoc~V Le. 2007.
 \newblock Learning to rank with nonsmooth cost functions.
 \newblock In \emph{Advances in neural information processing systems}, pages
   193--200.
+
+\bibitem[{Chen et~al.(2016)Chen, Zhu, Ling, Wei, and
+  Jiang}]{chen2016distraction}
+Qian Chen, Xiaodan Zhu, Zhenhua Ling, Si~Wei, and Hui Jiang. 2016.
+\newblock Distraction-based neural networks for document summarization.
+\newblock \emph{arXiv preprint arXiv:1610.08462}.
 
 \bibitem[{Cheng and Lapata(2016)}]{cheng2016neural}
 Jianpeng Cheng and Mirella Lapata. 2016.
@@ -38,6 +44,11 @@ Sumit Chopra, Michael Auli, and Alexander~M Rush. 2016.
 Arman Cohan and Nazli Goharian. 2016.
 \newblock Revisiting summarization evaluation for scientific articles.
 \newblock \emph{arXiv preprint arXiv:1604.00400}.
+
+\bibitem[{Hu et~al.(2015)Hu, Chen, and Zhu}]{hu2015lcsts}
+Baotian Hu, Qingcai Chen, and Fangze Zhu. 2015.
+\newblock Lcsts: A large scale chinese short text summarization dataset.
+\newblock \emph{arXiv preprint arXiv:1506.05865}.
 
 \bibitem[{Lin(2004)}]{lin2004rouge}
 Chin-Yew Lin. 2004.

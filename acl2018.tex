@@ -80,12 +80,12 @@ comparable to the state of the art.
 In \cite{yousefi2017text} researchers presented methods of extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
 The presented approach is completely unsupervised and does not require queries for any stage of training.
 Smaller local vocabularies, comparing to other methods, allow to reduce the training and deployment computational costs and thus make the approach more suitable for implementation on mobile devices.
-The authors perform experiments on two email corpora designed for text summarization and observe results that are much better than those of other unsupervised extractive email summarisation techniques and are comparable to the best supervised approaches.
+The authors perform experiments on two email corpora designed for text summarization and observe results that are much better than those of other unsupervised extractive email summarization techniques and are comparable to the best supervised approaches.
 
 Otherwise, in the past years there has not been any substantial advancements in extractive text summarization, most publications only proposed some small improvements to the already long-existing extractive methods.
 Researchers \cite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
 
-\section{Abstractive methods}
+\section{Abstractive methods} \label{abstractive}
 The goal of automatic text summarization systems is to produce summaries as good as the ones created by humans.
 However, when people produce summaries, in order to make them optimal in terms of content and linguistic quality, they tend to edit the text rather than just copy sentences from it as they are.
 This is why, in order to emulate this process, generation of abstractive summaries is necessary.
@@ -108,20 +108,33 @@ The new model includes a more sophisticated encoder which explicitly encodes the
 With these modifications, the model showed to significantly outperform the previously proposed system on the Gigaword corpus and perform competitively on the DUC-2004 task.
 Authors explain the distinctive improvement by the difference between tokenization of DUC-2004 and their training corpus, as well as by the fact that headlines in Gigaword are much shorter than in DUC-2004.
 
-Researchers at IBM \cite{nallapati2016abstractive} also modeled abstractive text summarization using attentional encoder-decoder recurrent neural networks.
-To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
-One of the most interesting models is called "Switching Generator/Pointer". In this model, the decoder is equipped with a "switch" that decides between generating a new word based on the context or using a word from the input.
-In addition, in their work authors proposed a new dataset for multi sentence document summarization and established benchmark numbers on it.
-
 Google has also proposed a sequence-to-sequence with attention model for text summarization, which they called "textsum".
 The researchers did not provide a paper in support of their work, but openly published the source code \cite{LiuGoogle2016} at a hosting service.
 
+Researchers at IBM \cite{nallapati2016abstractive} modeled abstractive text summarization using attentional encoder-decoder recurrent neural networks (RNN).
+To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
+One of the most interesting models is called "Switching Generator/Pointer". In this model, the decoder is equipped with a "switch" that decides between generating a new word based on the context or using a word from the input.
+In addition, in their work authors proposed a new dataset for multi sentence document summarization and established benchmark numbers on it.
+The proposed summarization approach showed to significantly outperform the ones of \cite{rush2015neural} and \cite{chopra2016abstractive} and exhibit better abstractive ability.
+Authors believe that their superior performance in comparison to the above methods was reached by using bidirectional recurrent neural network instead of the bag-of-embeddings representation to model the source, as this approach captures richer contextual information of every word.
+
 Both approaches are currently the state-of-the-art on the DUC/TAC competition.
+
+Limitations of the models above is that they can only deal with very short documents.
+Researchers at Facebook use only the first sentence of the source document to train the model, while researchers at Google and IBM use two sentences from the source with a limit of 120 words.
+However, summarization must be able to deal with much longer documents.
+
+In their work, \cite{chen2016distraction} explore neural summarization technologies for new articles which contain thousands of words.
+Researchers also base their model on the encoder-decoder framework, however, instead of focusing on attention to get the local context like most of the recent work does, they distract the models to different parts of a document to avoid focusing on only one thing and get the full picture.
+The authors do not restrict the encoders’ architectures to the standard RNN, but use bi-directional gated recurrent units (bi-GRUs) architecture for encoding and decoding.
+Without engineering any features, they train the models on two large datasets and test them on LCSTS corpus.
+The proposed approach achieved better performance than the best result reported in \cite{hu2015lcsts}, which the authors used as a baseline.
 
 \cite{see2017get}
 
 \section{Query-focused summarization}
 Query-focused summarization became a task in DUC in 2004 in response to researchers' claims that generic summarization is too unconstrained and does not consider special user needs.
+The aim of such summarization is to generate a summary of a document or multiple documents in the context of a query.
 Such summarization allows to use more sophisticated, targeted approaches that integrate methods that seek specific types of information with data-driven, generic methods \cite{nenkova2011automatic}.
 
 \cite{wang2016sentence} investigate the role of sentence compression techniques for query-focused multi-document summarization (MDS) and present a respective framework consisting of three steps: Sentence Ranking, Sentence Compression and Post-processing.
@@ -134,9 +147,10 @@ In \cite{litvak2017query} authors continued their earlier work \cite{litvak2015k
 The idea behind the MDL principle is that regularities in data can be used for its compression and the best hypothesis to describe these regularities is the one that can compress the data the most.
 In the proposed approach, authors select frequent word sets that lead to the best compression of the data and therefore describe the document the best.
 The extracted summary consist of sentences that provide the best coverage of query-related frequent word sets.
-The summarization approach was evaluated using ROUGE-1 based on the DUC 2005 and DUC 2006 corpora that were specifically designed for query-based summarization and has shown to perform competitively with the best results. 
+The summarization approach was evaluated using ROUGE-1 based on the DUC 2005 and DUC 2006 corpora that were specifically designed for query-based summarization and has shown to perform competitively with the best results.
 
-In their work, \cite{nema2017diversity} present a model for query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims mitigate the drawback of generating repeated phrases in the summary.
+The highly successful Encoder-Decoder Model that was discussed in Section \ref{abstractive} was recently adapted to the query-based summarization by \cite{nema2017diversity}.
+The authors present a model for abstractive query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims to mitigate the drawback of generating repeated phrases in the summary.
 
 \section{APIs}
 
