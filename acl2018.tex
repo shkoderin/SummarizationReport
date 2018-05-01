@@ -131,6 +131,10 @@ Finally, in the post-processing step, coreference resolution and sentence orderi
 All of the proposed models show substantial improvement over pure extraction-based approaches for query-based MDS, with the best-performing system yielding an 11.02 ROUGE-2 score on the DUC 2006 dataset.
 
 In \cite{litvak2017query} authors continued their earlier work \cite{litvak2015krimping} of applying the Minimum Description Length (MDL) principle for generic summarization by constructing a model where frequent word sets depend on the query.
+The idea behind the MDL principle is that regularities in data can be used for its compression and the best hypothesis to describe these regularities is the one that can compress the data the most.
+In the proposed approach, authors select frequent word sets that lead to the best compression of the data and therefore describe the document the best.
+The extracted summary consist of sentences that provide the best coverage of query-related frequent word sets.
+The summarization approach was evaluated using ROUGE-1 based on the DUC 2005 and DUC 2006 corpora that were specifically designed for query-based summarization and has shown to perform competitively with the best results. 
 
 In their work, \cite{nema2017diversity} present a model for query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims mitigate the drawback of generating repeated phrases in the summary.
 
