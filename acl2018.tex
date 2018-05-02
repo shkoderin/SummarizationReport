@@ -118,19 +118,22 @@ In addition, in their work authors proposed a new dataset for multi sentence doc
 The proposed summarization approach showed to significantly outperform the ones of \cite{rush2015neural} and \cite{chopra2016abstractive} and exhibit better abstractive ability.
 Authors believe that their superior performance in comparison to the above methods was reached by using bidirectional recurrent neural network instead of the bag-of-embeddings representation to model the source, as this approach captures richer contextual information of every word.
 
-Both approaches are currently the state-of-the-art on the DUC/TAC competition.
-
-Limitations of the models above is that they can only deal with very short documents.
+Although these approaches are considered to be the state-of-the-art, they are far from perfect in that they sometimes inaccurately reproduce factual details, are unable to deal with out-of-vocabulary (OOV) words and can only deal with very short documents.
 Researchers at Facebook use only the first sentence of the source document to train the model, while researchers at Google and IBM use two sentences from the source with a limit of 120 words.
-However, summarization must be able to deal with much longer documents.
+However, summarization systems need to be able to deal with much longer documents.
+In the works described next, authors tried to address these issues by proposing various modifications to the standard sequence-to-sequence model.
 
 In their work, \cite{chen2016distraction} explore neural summarization technologies for new articles which contain thousands of words.
-Researchers also base their model on the encoder-decoder framework, however, instead of focusing on attention to get the local context like most of the recent work does, they distract the models to different parts of a document to avoid focusing on only one thing and get the full picture.
-The authors do not restrict the encoders’ architectures to the standard RNN, but use bi-directional gated recurrent units (bi-GRUs) architecture for encoding and decoding.
+Researchers also base their model on the encoder-decoder framework, however, instead of focusing on attention to get the local context like most of the recent work does, they incorporate coverage mechanism, "distracting" the models to different parts of a document to avoid focusing on only one thing and get the full picture.
+The authors do not restrict the encoders' architectures to the standard RNN, but use bi-directional gated recurrent units (bi-GRUs) architecture for encoding and decoding.
 Without engineering any features, they train the models on two large datasets and test them on LCSTS corpus.
 The proposed approach achieved better performance than the best result reported in \cite{hu2015lcsts}, which the authors used as a baseline.
 
-\cite{see2017get}
+\cite{see2017get} propose a novel architecture that enhances the standard sequence-to-sequence attentional model by using a hybrid pointer-to-pointer generator network and the coverage mechanism.
+The proposed hybrid network is similar to the ones proposed for short-text summarization by \cite{gu2016incorporating} and \cite{miao2016language}.
+It uses pointing \cite{vinyals2015pointer} to copy words from the input text, which provides better accuracy and is better in dealing with OOV words, while retaining the ability to generate new words.
+To ensure coverage of the input document and thus reduce repetitions in the summary, authors propose a new version of the coverage vector by adapting the model of \cite{tu2016modeling}.
+The model was applied to the CNN/Daily Mail dataset, outperforming the results of \cite{nallapati2016abstractive} by several ROUGE points.
 
 \section{Query-focused summarization}
 Query-focused summarization became a task in DUC in 2004 in response to researchers' claims that generic summarization is too unconstrained and does not consider special user needs.
@@ -151,6 +154,7 @@ The summarization approach was evaluated using ROUGE-1 based on the DUC 2005 and
 
 The highly successful Encoder-Decoder Model that was discussed in Section \ref{abstractive} was recently adapted to the query-based summarization by \cite{nema2017diversity}.
 The authors present a model for abstractive query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims to mitigate the drawback of generating repeated phrases in the summary.
+
 
 \section{APIs}
 

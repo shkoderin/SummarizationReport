@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{32}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Bahdanau et~al.(2014)Bahdanau, Cho, and Bengio}]{bahdanau2014neural}
@@ -45,6 +45,11 @@ Arman Cohan and Nazli Goharian. 2016.
 \newblock Revisiting summarization evaluation for scientific articles.
 \newblock \emph{arXiv preprint arXiv:1604.00400}.
 
+\bibitem[{Gu et~al.(2016)Gu, Lu, Li, and Li}]{gu2016incorporating}
+Jiatao Gu, Zhengdong Lu, Hang Li, and Victor~OK Li. 2016.
+\newblock Incorporating copying mechanism in sequence-to-sequence learning.
+\newblock \emph{arXiv preprint arXiv:1603.06393}.
+
 \bibitem[{Hu et~al.(2015)Hu, Chen, and Zhu}]{hu2015lcsts}
 Baotian Hu, Qingcai Chen, and Fangze Zhu. 2015.
 \newblock Lcsts: A large scale chinese short text summarization dataset.
@@ -89,6 +94,12 @@ Parth Mehta. 2016.
 \newblock From extractive to abstractive summarization: a journey.
 \newblock In \emph{Proceedings of the ACL 2016 Student Research Workshop},
   pages 100--106.
+
+\bibitem[{Miao and Blunsom(2016)}]{miao2016language}
+Yishu Miao and Phil Blunsom. 2016.
+\newblock Language as a latent variable: Discrete generative models for
+  sentence compression.
+\newblock \emph{arXiv preprint arXiv:1609.07317}.
 
 \bibitem[{Mozer et~al.(1997)Mozer, Jordan, and Petsche}]{mozer1997}
 Michael Mozer, Michael~I. Jordan, and Thomas Petsche, editors. 1997.
@@ -160,6 +171,18 @@ Ilya Sutskever, Oriol Vinyals, and Quoc~V Le. 2014.
 \newblock Sequence to sequence learning with neural networks.
 \newblock In \emph{Advances in neural information processing systems}, pages
   3104--3112.
+
+\bibitem[{Tu et~al.(2016)Tu, Lu, Liu, Liu, and Li}]{tu2016modeling}
+Zhaopeng Tu, Zhengdong Lu, Yang Liu, Xiaohua Liu, and Hang Li. 2016.
+\newblock Modeling coverage for neural machine translation.
+\newblock \emph{arXiv preprint arXiv:1601.04811}.
+
+\bibitem[{Vinyals et~al.(2015)Vinyals, Fortunato, and
+  Jaitly}]{vinyals2015pointer}
+Oriol Vinyals, Meire Fortunato, and Navdeep Jaitly. 2015.
+\newblock Pointer networks.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  2692--2700.
 
 \bibitem[{Wang et~al.(2016)Wang, Raghavan, Castelli, Florian, and
   Cardie}]{wang2016sentence}
