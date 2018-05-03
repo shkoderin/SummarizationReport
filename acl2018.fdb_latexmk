@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex acl2018"] 1525275844 "acl2018.aux" "acl2018.bbl" "acl2018" 1525276169
+["bibtex acl2018"] 1525275844 "acl2018.aux" "acl2018.bbl" "acl2018" 1525343223
   "./acl_natbib.bst" 1518954773 47566 8107573a443aca442602b8e9bbe11c23 ""
-  "acl2018.aux" 1525276169 4312 4751fdfe6d4c1c21ce617174c7e0428c ""
+  "acl2018.aux" 1525343223 4312 4751fdfe6d4c1c21ce617174c7e0428c ""
   "acl2018.bib" 1525275831 9823 6584066ba9a6705cbcffc7d32b91687b ""
   (generated)
   "acl2018.bbl"
   "acl2018.blg"
-["pdflatex"] 1525276168 "acl2018.tex" "acl2018.pdf" "acl2018" 1525276169
+["pdflatex"] 1525343223 "acl2018.tex" "acl2018.pdf" "acl2018" 1525343223
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1480098688 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -73,13 +73,13 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1515527831 4129591 e0967916072af9fa6db55717a4139f66 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "acl2018.aux" 1525276169 4312 4751fdfe6d4c1c21ce617174c7e0428c ""
+  "acl2018.aux" 1525343223 4312 4751fdfe6d4c1c21ce617174c7e0428c ""
   "acl2018.bbl" 1525275845 8900 ee7cc771dd7cb293a72364a323e56fcb "bibtex acl2018"
-  "acl2018.out" 1525276168 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "acl2018.out" 1525343223 0 d41d8cd98f00b204e9800998ecf8427e ""
   "acl2018.sty" 1522157149 20908 bdf5ee331c0fe3b0fe7e186d0d0897f6 ""
-  "acl2018.tex" 1525276167 18734 74d29778f1800cee7d7f078db6ce4727 ""
+  "acl2018.tex" 1525343222 19571 a814d8834f0536060a3ddb78fc489715 ""
   (generated)
+  "acl2018.aux"
+  "acl2018.log"
   "acl2018.pdf"
   "acl2018.out"
-  "acl2018.log"
-  "acl2018.aux"
