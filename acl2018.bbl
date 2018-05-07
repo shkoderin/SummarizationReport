@@ -1,5 +1,10 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{38}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{AYLIEN()}]{aylienapi}
+AYLIEN.
+\newblock Text analysis api.
+\newblock \url{https://aylien.com/text-api/}.
 
 \bibitem[{Bahdanau et~al.(2014)Bahdanau, Cho, and Bengio}]{bahdanau2014neural}
 Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2014.
@@ -53,7 +58,7 @@ Marcus~L. Endicott. 2017.
 
 \bibitem[{Google(2017)}]{googleapi}
 Google. 2017.
-\newblock Google.
+\newblock Google cloud natural language rest api.
 \newblock \url{https://cloud.google.com/natural-language/}.
 
 \bibitem[{Gu et~al.(2016)Gu, Lu, Li, and Li}]{gu2016incorporating}
@@ -185,6 +190,11 @@ Horacio Saggion and Thierry Poibeau. 2013.
 Abigail See, Peter~J Liu, and Christopher~D Manning. 2017.
 \newblock Get to the point: Summarization with pointer-generator networks.
 \newblock \emph{arXiv preprint arXiv:1704.04368}.
+
+\bibitem[{SummaNLP(2014)}]{deepaiapi}
+SummaNLP. 2014.
+\newblock Textrank summarization.
+\newblock \url{https://deepai.org/}.
 
 \bibitem[{Sutskever et~al.(2014)Sutskever, Vinyals, and
   Le}]{sutskever2014sequence}

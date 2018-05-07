@@ -8,44 +8,46 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acl2018.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 36 entries,
+Warning--empty year in aylienapi
+You've used 38 entries,
             3573 wiz_defined-function locations,
-            877 strings with 11771 characters,
-and the built_in function-call counts, 23485 in all, are:
-= -- 2077
-> -- 1083
-< -- 26
-+ -- 345
-- -- 300
-* -- 1421
-:= -- 3576
-add.period$ -- 146
-call.type$ -- 36
-change.case$ -- 295
-chr.to.int$ -- 37
-cite$ -- 36
-duplicate$ -- 1591
-empty$ -- 1708
-format.name$ -- 406
-if$ -- 5167
+            888 strings with 11959 characters,
+and the built_in function-call counts, 24305 in all, are:
+= -- 2156
+> -- 1107
+< -- 28
++ -- 353
+- -- 306
+* -- 1453
+:= -- 3721
+add.period$ -- 153
+call.type$ -- 38
+change.case$ -- 307
+chr.to.int$ -- 39
+cite$ -- 39
+duplicate$ -- 1642
+empty$ -- 1772
+format.name$ -- 414
+if$ -- 5348
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 302
-newline$ -- 183
-num.names$ -- 145
-pop$ -- 710
+missing$ -- 310
+newline$ -- 193
+num.names$ -- 153
+pop$ -- 732
 preamble$ -- 1
-purify$ -- 242
+purify$ -- 252
 quote$ -- 0
-skip$ -- 1226
+skip$ -- 1277
 stack$ -- 0
-substring$ -- 780
-swap$ -- 716
+substring$ -- 802
+swap$ -- 731
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 324
-warning$ -- 0
-while$ -- 144
+type$ -- 342
+warning$ -- 1
+while$ -- 150
 width$ -- 0
-write$ -- 450
+write$ -- 473
+(There was 1 warning)
