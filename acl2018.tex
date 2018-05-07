@@ -156,14 +156,31 @@ The highly successful Encoder-Decoder Model that was discussed in Section \ref{a
 The authors present a model for abstractive query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims to mitigate the drawback of generating repeated phrases in the summary.
 
 \section{APIs}
-Service Kong Inc. (until October 2017 - Mashape, Inc.), which offers open-source platforms and cloud services to manage, monitor and scale APIs and microservices, provides a variety of summarization APIs and rates the following four as the best:
+Service Kong Inc. (until October 2017 - Mashape, Inc.), which offers open-source platforms and cloud services to manage, monitor and scale APIs, as well as a marketplace for discovering and publishing them, provides a variety of summarization APIs and rates the following as the best:
 \begin{itemize}
+\item DuckDuckGo Zero-Click Info API (2011) provides results for topic summaries, categories, disambiguation, and definitions. It gives direct links to other services (via !bang syntax), lists related topics and gives official sites when available.
 \item ML Analyzer API (2013) includes a variety of endpoints, such as Article Summarizer, Language Detector, Adult Content Analyzer, Content Classifier, Names Extractor, Sentiment Analyzer, Location Extractor and Stocks Symbols Extractor.
-\item Stremor RSS Summary API
-\item DuckDuckGo Zero-Click Info API (2011) provides results for topic summaries, categories, disambiguation, and definitions.
-\item Stremor TLDR for HTML or Text
+\item Stremor RSS Summary API and Stremor TLDR for HTML or Text (2013) are are products of Stremor Corp., which develops and builds APIs for language processing. Their summarization APIs generate short summaries of long input, using Stremor's language heuristics engine, Liquid Helium.
 \end{itemize}
 However, all of these APIs are outdated and therefore cannot compete with the state-of-the-art algorithms.
+
+Marcus L. Endicott conducted a  thorough research on the automatic summarization  implementations, publicly available on  the hosting service GitHub and compiled a list of the best 100 summarizers \cite{endicot2017Top100}.
+
+MeaningCloud provides its Summarization API for free \cite{meaaningcloud2017api}. It is based on the extractive summarization approach, producing multilingual summaries of a desired length.
+
+Powerful text analysis APIs are provided by a startup Indico \cite{indicoapi}.
+It provides native integration with some major programming languages, including Python, Java, Ruby, R, Javascript and others.
+Additionally, it is also possible to use the Indico suite of predictive APIs directly through RESTful API calls.
+Text for summarization can be sent to the Indico text analysis functions as raw text strings or URLs.
+Each Indico function can be called with a batch of data for analyzing many examples with a single network request, which significantly improves the speed of using the APIs.
+Indico also includes a variety of models which can be used to analyze text in different contexts such as sentiment, references to people, places or organizations, relevance of query terms and phrases, language of the text, emotions expressed by the author etc.
+In addition, Indico can be used for image analysis.
+To use Indico's public API, a free account and an API key is required.
+Indico provides three plans: Pay as You Go, Enterprise and Non-commercial.
+Pay as You Go grants access to all standard text and image APIs with 10.000 free calls per month and every consequent call being chargeable.
+The Enterprise plan provides access to the highest quality text and image APIs, with fixed price per month starting at \$5000 for millions of calls.
+This plan also includes additional privileges such as private cloud, free consultations and access to the development team.
+The Non-commercial plan, which is aimed at students and researchers, provides 10.000 free calls each month with the possibility to get extra calls at request.
 
 \section{Evaluation methods}
 In this section we provide an overview of the main evaluation methods that are currently used to assess and report results on automatic summarization.
