@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Bahdanau et~al.(2014)Bahdanau, Cho, and Bengio}]{bahdanau2014neural}
@@ -50,6 +50,11 @@ Marcus~L. Endicott. 2017.
 \newblock 100 best github: Automatic summarization.
 \newblock
   \url{http://meta-guide.com/software-meta-guide/100-best-github-automatic-summarization}.
+
+\bibitem[{Google(2017)}]{googleapi}
+Google. 2017.
+\newblock Google.
+\newblock \url{https://cloud.google.com/natural-language/}.
 
 \bibitem[{Gu et~al.(2016)Gu, Lu, Li, and Li}]{gu2016incorporating}
 Jiatao Gu, Zhengdong Lu, Hang Li, and Victor~OK Li. 2016.
