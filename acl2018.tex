@@ -219,10 +219,13 @@ ROUGE is cheap and fast, and, unlike BLEU, that is oriented at precision, which 
 
 There are several variations of ROUGE. Below we shortly describe the ones that are most commonly used.
 \begin{itemize}
-\item ROUGE-n
-\item ROUGE-L
-\item ROUGE-SU
+\item ROUGE-N is based on an n-gram recall between a candidate summary and a set of reference summaries, i.e. the score is computed as the ratio between the number of common n-grams and the number of n-grams only in the reference summary.
+\item ROUGE-L takes into account into account longest common subsequences to avoid the shortcoming of ROUGE-N when the measure may be based on sequences of text which are too small.
+Advantages of this metric are that it only requires in-sequence matches but not consecutive matches, automatically includes longest in-sequence common n-grams and takes into account sentence level structure in a natural way.
+\item ROUGE-SU is an extension of ROUGE-S which takes into account both bigrams and unigrams, thus avoiding assignment of 0 score to a sentence which does not share a skip bigram but instead has a common unigram.
+Correlation analysis results on DUC summarization data show that ROUGE-SU correlates the best with human judgements.
 \end{itemize}
+All variations of ROUGE can be downloaded from a GutHub repository \cite{rougerepos}.
 
 One of the main problems of ROUGE is that it relies purely on lexical overlaps, which can significantly underrate summarization score, especially in documents that have a lot of synonyms, terminology variations and paraphrasing.
 Motivated by this observation, \cite{cohan2016revisiting} conducted a detailed  analysis of ROUGE’s effectiveness for evaluation of scientific summaries.

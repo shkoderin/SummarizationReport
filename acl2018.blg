@@ -9,45 +9,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: acl2018.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty year in aylienapi
-You've used 38 entries,
+Warning--empty year in indicoapi
+Warning--empty year in meaaningcloud2017api
+Warning--empty year in rougerepos
+Warning--empty year in deepaiapi
+You've used 39 entries,
             3573 wiz_defined-function locations,
-            888 strings with 11959 characters,
-and the built_in function-call counts, 24305 in all, are:
-= -- 2156
-> -- 1107
-< -- 28
-+ -- 353
-- -- 306
-* -- 1453
-:= -- 3721
+            892 strings with 12019 characters,
+and the built_in function-call counts, 24652 in all, are:
+= -- 2178
+> -- 1119
+< -- 29
++ -- 357
+- -- 309
+* -- 1476
+:= -- 3783
 add.period$ -- 153
-call.type$ -- 38
-change.case$ -- 307
-chr.to.int$ -- 39
-cite$ -- 39
-duplicate$ -- 1642
-empty$ -- 1772
-format.name$ -- 414
-if$ -- 5348
+call.type$ -- 39
+change.case$ -- 313
+chr.to.int$ -- 40
+cite$ -- 44
+duplicate$ -- 1664
+empty$ -- 1797
+format.name$ -- 418
+if$ -- 5414
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 310
-newline$ -- 193
-num.names$ -- 153
-pop$ -- 732
+missing$ -- 314
+newline$ -- 198
+num.names$ -- 157
+pop$ -- 757
 preamble$ -- 1
-purify$ -- 252
+purify$ -- 257
 quote$ -- 0
-skip$ -- 1277
+skip$ -- 1285
 stack$ -- 0
-substring$ -- 802
-swap$ -- 731
+substring$ -- 813
+swap$ -- 735
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 342
-warning$ -- 1
-while$ -- 150
+type$ -- 351
+warning$ -- 5
+while$ -- 153
 width$ -- 0
-write$ -- 473
-(There was 1 warning)
+write$ -- 481
+(There were 5 warnings)
