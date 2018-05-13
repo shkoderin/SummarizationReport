@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{45}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{AYLIEN()}]{aylienapi}
@@ -66,6 +66,14 @@ Jiatao Gu, Zhengdong Lu, Hang Li, and Victor~OK Li. 2016.
 \newblock Incorporating copying mechanism in sequence-to-sequence learning.
 \newblock \emph{arXiv preprint arXiv:1603.06393}.
 
+\bibitem[{Hermann et~al.(2015)Hermann, Kocisky, Grefenstette, Espeholt, Kay,
+  Suleyman, and Blunsom}]{hermann2015teaching}
+Karl~Moritz Hermann, Tomas Kocisky, Edward Grefenstette, Lasse Espeholt, Will
+  Kay, Mustafa Suleyman, and Phil Blunsom. 2015.
+\newblock Teaching machines to read and comprehend.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  1693--1701.
+
 \bibitem[{Hu et~al.(2015)Hu, Chen, and Zhu}]{hu2015lcsts}
 Baotian Hu, Qingcai Chen, and Fangze Zhu. 2015.
 \newblock Lcsts: A large scale chinese short text summarization dataset.
@@ -132,12 +140,26 @@ Michael Mozer, Michael~I. Jordan, and Thomas Petsche, editors. 1997.
 \newblock \emph{Advances in Neural Information Processing Systems 9, NIPS,
   Denver, CO, USA, December 2-5, 1996}. {MIT} Press.
 
+\bibitem[{Nallapati et~al.(2017)Nallapati, Zhai, and
+  Zhou}]{nallapati2017summarunner}
+Ramesh Nallapati, Feifei Zhai, and Bowen Zhou. 2017.
+\newblock Summarunner: A recurrent neural network based sequence model for
+  extractive summarization of documents.
+\newblock In \emph{AAAI}, pages 3075--3081.
+
 \bibitem[{Nallapati et~al.(2016)Nallapati, Zhou, Gulcehre, Xiang
   et~al.}]{nallapati2016abstractive}
 Ramesh Nallapati, Bowen Zhou, Caglar Gulcehre, Bing Xiang, et~al. 2016.
 \newblock Abstractive text summarization using sequence-to-sequence rnns and
   beyond.
 \newblock \emph{arXiv preprint arXiv:1602.06023}.
+
+\bibitem[{Narayan et~al.(2017)Narayan, Papasarantopoulos, Cohen, and
+  Lapata}]{narayan2017neural}
+Shashi Narayan, Nikos Papasarantopoulos, Shay~B Cohen, and Mirella Lapata.
+  2017.
+\newblock Neural extractive summarization with side information.
+\newblock \emph{arXiv preprint arXiv:1704.04530}.
 
 \bibitem[{Nema et~al.(2017)Nema, Khapra, Laha, and
   Ravindran}]{nema2017diversity}
@@ -167,6 +189,12 @@ Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. 2002.
 \newblock In \emph{Proceedings of the 40th annual meeting on association for
   computational linguistics}, pages 311--318. Association for Computational
   Linguistics.
+
+\bibitem[{Parveen et~al.(2015)Parveen, Ramsl, and Strube}]{parveen2015topical}
+Daraksha Parveen, Hans-Martin Ramsl, and Michael Strube. 2015.
+\newblock Topical coherence for graph-based extractive summarization.
+\newblock In \emph{Proceedings of the 2015 Conference on Empirical Methods in
+  Natural Language Processing}, pages 1949--1954.
 
 \bibitem[{Rush et~al.(2015{\natexlab{a}})Rush, Chopra, and
   Weston}]{rush2015neural}
@@ -220,6 +248,14 @@ Oriol Vinyals, Meire Fortunato, and Navdeep Jaitly. 2015.
 \newblock In \emph{Advances in Neural Information Processing Systems}, pages
   2692--2700.
 
+\bibitem[{Wan(2010)}]{wan2010towards}
+Xiaojun Wan. 2010.
+\newblock Towards a unified approach to simultaneous single-document and
+  multi-document summarizations.
+\newblock In \emph{Proceedings of the 23rd international conference on
+  computational linguistics}, pages 1137--1145. Association for Computational
+  Linguistics.
+
 \bibitem[{Wang et~al.(2016)Wang, Raghavan, Castelli, Florian, and
   Cardie}]{wang2016sentence}
 Lu~Wang, Hema Raghavan, Vittorio Castelli, Radu Florian, and Claire Cardie.
@@ -227,6 +263,13 @@ Lu~Wang, Hema Raghavan, Vittorio Castelli, Radu Florian, and Claire Cardie.
 \newblock A sentence compression based framework to query-focused
   multi-document summarization.
 \newblock \emph{arXiv preprint arXiv:1606.07548}.
+
+\bibitem[{Yasunaga et~al.(2017)Yasunaga, Zhang, Meelu, Pareek, Srinivasan, and
+  Radev}]{yasunaga2017graph}
+Michihiro Yasunaga, Rui Zhang, Kshitijh Meelu, Ayush Pareek, Krishnan
+  Srinivasan, and Dragomir Radev. 2017.
+\newblock Graph-based neural multi-document summarization.
+\newblock \emph{arXiv preprint arXiv:1706.06681}.
 
 \bibitem[{Yousefi-Azar and Hamey(2017)}]{yousefi2017text}
 Mahmood Yousefi-Azar and Len Hamey. 2017.

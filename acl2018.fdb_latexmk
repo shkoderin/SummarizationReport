@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex acl2018"] 1525773136 "acl2018.aux" "acl2018.bbl" "acl2018" 1525777692
+["bibtex acl2018"] 1526225197 "acl2018.aux" "acl2018.bbl" "acl2018" 1526225233
   "./acl_natbib.bst" 1518954773 47566 8107573a443aca442602b8e9bbe11c23 ""
-  "acl2018.aux" 1525777692 4810 971916908d8499b3dd92d23e6bb26ada ""
-  "acl2018.bib" 1525773180 11356 27dc48f40d79d2473c314abb6f122117 ""
+  "acl2018.aux" 1526225233 5736 7d0004a0700e65dd6d1402eb39e2b86d ""
+  "acl2018.bib" 1526224708 13177 ab9349ba0e37f7175afedaacc8e3f3d3 ""
   (generated)
-  "acl2018.bbl"
   "acl2018.blg"
-["pdflatex"] 1525777691 "acl2018.tex" "acl2018.pdf" "acl2018" 1525777692
+  "acl2018.bbl"
+["pdflatex"] 1526225232 "acl2018.tex" "acl2018.pdf" "acl2018" 1526225233
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1480098688 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -73,13 +73,13 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1515527831 4129591 e0967916072af9fa6db55717a4139f66 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "acl2018.aux" 1525777692 4810 971916908d8499b3dd92d23e6bb26ada ""
-  "acl2018.bbl" 1525773136 9926 c9db5f50a123a64330c160829db38242 "bibtex acl2018"
-  "acl2018.out" 1525777691 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "acl2018.aux" 1526225233 5736 7d0004a0700e65dd6d1402eb39e2b86d ""
+  "acl2018.bbl" 1526225197 11918 23725d1beba988b47547c93c5a4e2fc5 "bibtex acl2018"
+  "acl2018.out" 1526225232 0 d41d8cd98f00b204e9800998ecf8427e ""
   "acl2018.sty" 1522157149 20908 bdf5ee331c0fe3b0fe7e186d0d0897f6 ""
-  "acl2018.tex" 1525777690 24644 ad281afc8e082c28408adef809607c69 ""
+  "acl2018.tex" 1526225231 28055 3b914dd96ff040322e2e9a029f74883f ""
   (generated)
-  "acl2018.out"
   "acl2018.log"
-  "acl2018.aux"
   "acl2018.pdf"
+  "acl2018.out"
+  "acl2018.aux"

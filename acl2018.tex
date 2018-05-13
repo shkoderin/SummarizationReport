@@ -70,12 +70,33 @@ Extractive summarization methods produce summaries by concatenating several sent
 The main task of such systems is to determine which sentences are important and should therefore be included in the summary.
 For many years extractive methods have been the main focus of researchers in the text summarization community.
 
+Many of the recent approaches address extractive summarization as a sequence labeling task, where each label indicates whether a sentence should be included in the summary.
+
 In \cite{cheng2016neural} researchers presented a data-driven summarization framework based on neural networks and continuous sentence features.
 They develop data-driven single-document summarization framework based on an hierarchical document encoder and an attention-based extractor.
 Such architecture enables development of different classes of summarization models which can extract sentences or words.
 The models can be trained on large scale datasets and learn informativeness features based on continuous representations without any access to linguistic annotation.
+The labels are assigned to each sentence in the document individually based on their semantic correspondence with the gold summary.
 The authors tested their approach on two datasets and demonstrated results that are
 comparable to the state of the art.
+
+\cite{nallapati2017summarunner} present a RNN-based sequence model for extractive single-document summarization  which they call SummaRuNNer.
+The approach is based on the idea of identifying the set of sentences which collectively give the highest ROUGE with respect to the gold summary.
+The model allows visualization of its predictions broken up by abstract features such as information content, salience and novelty, thus being very interpretable.
+Authors also present a novel training mechanism that allows the extractive model to be trained end-to-end using abstractive summaries.
+The approach was evaluated on three datasets: Daily Mail, joint CNN/Daily Mail and Out-of-Domain DUC 2002 corpus.
+Results on Daily Mail corpus were compared to the ones of \cite{cheng2016neural} using Rouge recall with summary length restricted to 75 and 275 bytes.
+The extractively trained SummaRuNNer model showed significant improvement over the comparable model for summary length of 75 bytes, while performing comparably for summary length of 275 bytes.
+The abstractively trained SummaRuNNer model performed comparably for summary length of 75 bytes, while underperforming the comparable model for summary length of 275 bytes.
+On the joint CNN/Daily Mail corpus, SummaRuNNer significantly outperforms the abstractive model of \cite{nallapati2016abstractive}, which was the only work at the time, that reported performance on this dataset.
+On the Out-of-Domain DUC 2002 corpus, SummaRuNNer was also on par with \cite{cheng2016neural}, however underperformed graph-based TGRAPH \cite{parveen2015topical} and URANK \cite{wan2010towards} algorithms that were state-of-the-art on this corpus at the time.
+
+In \cite{narayan2017neural} authors use an architecture similar to those in previous approaches, however, for sentence ranking, they introduce a global optimization framework, which combines the maximum-likelihood cross-entropy loss with rewards from policy gradient reinforcement learning to directly optimize the final evaluation metric, ROUGE.
+A sentence gets a high rank for summary selection if it often occurs in high scoring summaries.
+The model was applied to the CNN/Daily Mail dataset, originally collected by \cite{hermann2015teaching}, and automatically evaluated using ROUGE, outperforming both of the above extractive systems, which are considered to be state-of-the art, as well as the most prominent abstractive systems \cite{nallapati2016abstractive, chen2016distraction, see2017get}.
+Human evaluations showed that summaries, produced using this approach are also more informative and complete.
+
+\cite{yasunaga2017graph}
 
 In \cite{yousefi2017text} researchers presented methods of extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
 The presented approach is completely unsupervised and does not require queries for any stage of training.
@@ -94,6 +115,7 @@ Therefore, abstractive summarization requires a deeper semantic and discourse in
 
 Very recently, there have been several breakthroughs in abstractive text summarization using deep learning.
 Most of the research relies on Sequence to Sequence Model \cite{sutskever2014sequence}, which was first introduced as Encoder-Decoder Model by \cite{cho2014learning} and later extended by \cite{bahdanau2014neural} with so-called "attention mechanism".
+Encoder encodes source sequence into a context vector, while decoder decodes context vector to produce a target sequence. Attention mechanism is used to locate the focus region  during decoding.
 Sequence to Sequence (or seq2seq) model manages text generation pretty well as it was originally developed for machine translation.
 
 A group of researchers at Facebook \cite{rush2015neural} presented a fully data-driven approach to abstractive sentence summarization.
@@ -154,6 +176,7 @@ The summarization approach was evaluated using ROUGE-1 based on the DUC 2005 and
 
 The highly successful Encoder-Decoder Model that was discussed in Section \ref{abstractive} was recently adapted to the query-based summarization by \cite{nema2017diversity}.
 The authors present a model for abstractive query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims to mitigate the drawback of generating repeated phrases in the summary.
+The authors also introduced a new dataset based on debatepedia and empirically proved that their approach performs significantly better than the plain (vanilla) encode-attend-decode mechanism, gaining 28\% in ROUGE-L score, and thus outperforming the previously proposed models.
 
 \section{APIs}
 Service Kong Inc. (until October 2017 - Mashape, Inc.), which offers open-source platforms and cloud services to manage, monitor and scale APIs, as well as a marketplace for discovering and publishing them, provides a variety of summarization APIs and rates the following as the best:
