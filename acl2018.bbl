@@ -1,5 +1,12 @@
-\begin{thebibliography}{46}
+\begin{thebibliography}{52}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Allan et~al.(2003)Allan, Wade, and Bolivar}]{allan2003retrieval}
+James Allan, Courtney Wade, and Alvaro Bolivar. 2003.
+\newblock Retrieval and novelty detection at the sentence level.
+\newblock In \emph{Proceedings of the 26th annual international ACM SIGIR
+  conference on Research and development in informaion retrieval}, pages
+  314--321. ACM.
 
 \bibitem[{AYLIEN()}]{aylienapi}
 AYLIEN.
@@ -50,11 +57,25 @@ Arman Cohan and Nazli Goharian. 2016.
 \newblock Revisiting summarization evaluation for scientific articles.
 \newblock \emph{arXiv preprint arXiv:1604.00400}.
 
+\bibitem[{Delort and Alfonseca(2012)}]{delort2012dualsum}
+Jean-Yves Delort and Enrique Alfonseca. 2012.
+\newblock Dualsum: a topic-model based approach for update summarization.
+\newblock In \emph{Proceedings of the 13th Conference of the European Chapter
+  of the Association for Computational Linguistics}, pages 214--223.
+  Association for Computational Linguistics.
+
 \bibitem[{Endicott(2017)}]{endicot2017Top100}
 Marcus~L. Endicott. 2017.
 \newblock 100 best github: Automatic summarization.
 \newblock
   \url{http://meta-guide.com/software-meta-guide/100-best-github-automatic-summarization}.
+
+\bibitem[{Gillick et~al.(2009)Gillick, Favre, Hakkani-T{\"u}r, Bohnet, Liu, and
+  Xie}]{gillick2009icsi}
+Daniel Gillick, Benoit Favre, Dilek Hakkani-T{\"u}r, Bernd Bohnet, Yang Liu,
+  and Shasha Xie. 2009.
+\newblock The icsi/utd summarization system at tac 2009.
+\newblock In \emph{TAC}.
 
 \bibitem[{Google(2017)}]{googleapi}
 Google. 2017.
@@ -89,6 +110,14 @@ Thomas~N Kipf and Max Welling. 2016.
 \newblock Semi-supervised classification with graph convolutional networks.
 \newblock \emph{arXiv preprint arXiv:1609.02907}.
 
+\bibitem[{Li et~al.(2015)Li, Liu, and Zhao}]{li2015improving}
+Chen Li, Yang Liu, and Lin Zhao. 2015.
+\newblock Improving update summarization via supervised ilp and sentence
+  reranking.
+\newblock In \emph{Proceedings of the 2015 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies}, pages 1317--1322.
+
 \bibitem[{Lin(2004)}]{lin2004rouge}
 Chin-Yew Lin. 2004.
 \newblock Rouge: A package for automatic evaluation of summaries.
@@ -122,6 +151,14 @@ Elena Lloret and Manuel Palomar. 2012.
 Hans~Peter Luhn. 1958.
 \newblock The automatic creation of literature abstracts.
 \newblock \emph{IBM Journal of research and development}, 2(2):159--165.
+
+\bibitem[{Martins and Smith(2009)}]{martins2009summarization}
+Andr{\'e}~FT Martins and Noah~A Smith. 2009.
+\newblock Summarization with a joint model for sentence extraction and
+  compression.
+\newblock In \emph{Proceedings of the Workshop on Integer Linear Programming
+  for Natural Langauge Processing}, pages 1--9. Association for Computational
+  Linguistics.
 
 \bibitem[{MeaningCloud()}]{meaaningcloud2017api}
 MeaningCloud.
@@ -268,6 +305,13 @@ Lu~Wang, Hema Raghavan, Vittorio Castelli, Radu Florian, and Claire Cardie.
 \newblock A sentence compression based framework to query-focused
   multi-document summarization.
 \newblock \emph{arXiv preprint arXiv:1606.07548}.
+
+\bibitem[{Woodsend and Lapata(2012)}]{woodsend2012multiple}
+Kristian Woodsend and Mirella Lapata. 2012.
+\newblock Multiple aspect summarization using integer linear programming.
+\newblock In \emph{Proceedings of the 2012 Joint Conference on Empirical
+  Methods in Natural Language Processing and Computational Natural Language
+  Learning}, pages 233--243. Association for Computational Linguistics.
 
 \bibitem[{Yasunaga et~al.(2017)Yasunaga, Zhang, Meelu, Pareek, Srinivasan, and
   Radev}]{yasunaga2017graph}

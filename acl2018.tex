@@ -183,6 +183,24 @@ The highly successful Encoder-Decoder Model that was discussed in Section \ref{a
 The authors present a model for abstractive query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims to mitigate the drawback of generating repeated phrases in the summary.
 The authors also introduced a new dataset based on debatepedia and empirically proved that their approach performs significantly better than the plain (vanilla) encode-attend-decode mechanism, gaining 28\% in ROUGE-L score, and thus outperforming the previously proposed models.
 
+\section{Update summarization}
+Update summarization is a MDS task of creating a summary under the assumption that the reader is already familiar with the content of older relevant documents.
+The purpose of an update summary is thus to inform the user about the new relevant information on a particular topic.
+Back in 2003, this task was approached by \cite{allan2003retrieval} who concluded it to be a hardly feasible challenge.
+From 2007 to 2011, while update summarization task was part of the DUC challenge, some advances were made in the field, however in the past few years a very limited research has been conducted on the topic.
+Therefore, in this section we cover some of the related work that has been done in the last 10 years.
+
+\cite{gillick2009icsi} improved on their earlier system, achieving top performance in 2009 TAC Summarization Task.
+Authors adapted their standard system to the update task by taking into account sentence position, more precisely, by assuming that articles on recurrent topics tend to state new information at the beginning, before recapping past details. 
+This update showed to significantly improve ROUGE-2 scores.
+
+Three years later, \cite{delort2012dualsum} proposed a new unsupervised nonparametric Bayesian approach to model novelty in a document.
+The model, which they call DualSum, is a variant of Latent Dirichlet Allocation (LDA) and learns to distinguish between common information and novel information.
+
+\cite{li2015improving} adopt the supervised Integer Linear Programming (ILP) framework which has been widely used for generic summarization task in earlier years \cite{martins2009summarization, woodsend2012multiple} for the update summarization task.
+Authors make two major improvements: 1) a set of rich features are used to measure the importance and novelty of the bigram concepts used in the ILP model and 2) a sentence reranking component is designed which allows  to explicitly model a sentence’s importance and novelty.
+Authors evaluate their methods using several recent TAC data sets, from 2008 to 2011 using ROUGE.
+
 \section{APIs}
 Service Kong Inc. (until October 2017 - Mashape, Inc.), which offers open-source platforms and cloud services to manage, monitor and scale APIs, as well as a marketplace for discovering and publishing them, provides a variety of summarization APIs and rates the following as the best:
 \begin{itemize}
