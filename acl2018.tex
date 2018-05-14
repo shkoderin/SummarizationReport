@@ -46,7 +46,9 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-This paper provides an overview of the most prominent algorithms for automatic summarization that were proposed in the last years.
+Automatic Text Summarization is the process of automatically reducing the original text document in order to create a summary of its essential content.
+Despite the progress in the area that has been achieved in over 50 years of the research in the topic, automatic summarization systems are still far from perfect, posing many challenges to the researchers in the field.
+This paper provides an overview of the most prominent algorithms for automatic summarization that were proposed in the last years, as well as describes automatic and manual evaluation methods that are currently widely used for quality assesment of automatic summarization systems.
 \end{abstract}
 
 
@@ -59,7 +61,7 @@ A good summary must be concise and fluent, capture all the important topics, but
 For a long time extractive techniques of text summarization have been the primary focus of research in the field.
 However, in the past years there have been less major advances in extractive text summarization.
 Most of the research in this area proposes either an enhancement of one of the available extractive approaches, or an ensemble of several previously known extractive methods.
-The alternative approach of abstractive summarization...
+The alternative approach of abstractive summarization has become much more attractive to the researchers in the recent years, especially with the emergence of deep learning.
 
 There is a number of scientific works \cite{nenkova2011automatic, lloret2012text, saggion2013automatic} that provide an extensive overview of different automatic summarization methods that were proposed ever since the publication of the first paper on the topic by \cite{luhn1958automatic}.
 In our paper, we focus on the most prominent algorithms that were proposed in the last several years and are currently considered to be state-of-the-art, as well as describe the techniques for summarization evaluation which are currently standardly used for assesment of these algorithms.
@@ -83,7 +85,7 @@ The authors tested their approach on DailyMail and DUC 2002 datasets and demonst
 The approach is based on the idea of identifying the set of sentences which collectively give the highest ROUGE with respect to the gold summary.
 The model allows visualization of its predictions broken up by abstract features such as information content, salience and novelty, thus being very interpretable.
 Authors also present a novel training mechanism that allows the extractive model to be trained end-to-end using abstractive summaries.
-The approach was evaluated on three datasets: Daily Mail, joint CNN/DailyMail and Out-of-Domain DUC 2002 corpus.
+The approach was evaluated on three datasets: Daily Mail, joint CNN/DailyMail, originally collected by \cite{hermann2015teaching}, and Out-of-Domain DUC 2002 corpus.
 Results on DailyMail corpus were compared to the ones of \cite{cheng2016neural} using Rouge recall with summary length restricted to 75 and 275 bytes.
 The extractively trained SummaRuNNer model showed significant improvement over the comparable model for summary length of 75 bytes, while performing comparably for summary length of 275 bytes.
 The abstractively trained SummaRuNNer model performed comparably for summary length of 75 bytes, while underperforming the comparable model for summary length of 275 bytes.
@@ -92,7 +94,7 @@ On the Out-of-Domain DUC 2002 corpus, SummaRuNNer was also on par with \cite{che
 
 In \cite{narayan2017neural} authors use an architecture similar to those in previous approaches, however, for sentence ranking, they introduce a global optimization framework, which combines the maximum-likelihood cross-entropy loss with rewards from policy gradient reinforcement learning to directly optimize the final evaluation metric, ROUGE.
 A sentence gets a high rank for summary selection if it often occurs in high scoring summaries.
-The model was applied to the CNN/Daily Mail dataset, originally collected by \cite{hermann2015teaching}, and automatically evaluated using ROUGE, outperforming both of the above extractive systems, which are considered to be state-of-the art, as well as the most prominent abstractive systems \cite{nallapati2016abstractive, chen2016distraction, see2017get}, discussed in the next section.
+The model was applied to the CNN/Daily Mail dataset and automatically evaluated using ROUGE, outperforming both of the above extractive systems, which are considered to be state-of-the art, as well as the most prominent abstractive systems \cite{nallapati2016abstractive, chen2016distraction, see2017get}, discussed in the next section.
 Human evaluations showed that summaries, produced using this approach are also more informative and complete.
 
 \cite{yasunaga2017graph} propose a graph-based neural multi-document summarization (MDS) based on the application of Graph Convolutional Networks (GCN) \cite{kipf2016semi} on sentence relation graphs.
@@ -100,13 +102,9 @@ GCN takes in sentence embeddings from Recurrent Neural Networks (RNN) as input n
 Sentence salience is then estimated through a regression on top and the important sentences are extracted in a greedy manner while avoiding redundancy.
 The model was evaluated on the DUC 2004 multi-document summarization (MDS) task, outperforming traditional graph-based extractive summarizers and the vanilla GRU sequence model with no graph, as well performing competitively to other state-of-the-art MDS approaches.
 
-In \cite{yousefi2017text} researchers presented methods of extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
-The presented approach is completely unsupervised and does not require queries for any stage of training.
-Smaller local vocabularies, comparing to other methods, allow to reduce the training and deployment computational costs and thus make the approach more suitable for implementation on mobile devices.
-The authors perform experiments on two email corpora designed for text summarization and observe results that are much better than those of other unsupervised extractive email summarization techniques and are comparable to the best supervised approaches.
-
-Otherwise, in the past years there has not been any substantial advancements in extractive text summarization, most publications only proposed some small improvements to the already long-existing extractive methods.
-Researchers \cite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
+Otherwise, in the past years there has not been any substantial advancements in extractive text summarization, most publications only proposed some improvements to the already long-existing extractive methods.
+Researchers such as \cite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
+In the next section we provide an overview of the most recent advances in abstractive summarization methods.
 
 \section{Abstractive methods} \label{abstractive}
 The goal of automatic text summarization systems is to produce summaries as good as the ones created by humans.
@@ -132,9 +130,6 @@ The new model includes a more sophisticated encoder which explicitly encodes the
 With these modifications, the model showed to significantly outperform the previously proposed system on the Gigaword corpus and perform competitively on the DUC-2004 task.
 Authors explain the distinctive improvement by the difference between tokenization of DUC-2004 and their training corpus, as well as by the fact that headlines in Gigaword are much shorter than in DUC-2004.
 
-Google has also proposed a sequence-to-sequence with attention model for text summarization, which they called "textsum".
-The researchers did not provide a paper in support of their work, but openly published the source code \cite{LiuGoogle2016} at a hosting service.
-
 Researchers at IBM \cite{nallapati2016abstractive} modeled abstractive text summarization using attentional encoder-decoder recurrent neural networks.
 To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
 One of the most interesting models is called "Switching Generator/Pointer". In this model, the decoder is equipped with a "switch" that decides between generating a new word based on the context or using a word from the input.
@@ -142,12 +137,15 @@ In addition, in their work authors proposed a new dataset for multi sentence doc
 The proposed summarization approach showed to significantly outperform the ones of \cite{rush2015neural} and \cite{chopra2016abstractive} and exhibit better abstractive ability.
 Authors believe that their superior performance in comparison to the above methods was reached by using bidirectional RNN instead of the bag-of-embeddings representation to model the source, as this approach captures richer contextual information of every word.
 
+Google has also proposed a sequence-to-sequence with attention model for text summarization, which they called "textsum".
+The researchers did not provide a paper in support of their work, but openly published the source code \cite{LiuGoogle2016} at a hosting service.
+
 Although these approaches are considered to be the state-of-the-art, they are far from perfect in that they sometimes inaccurately reproduce factual details, are unable to deal with out-of-vocabulary (OOV) words and can only deal with very short documents.
 Researchers at Facebook use only the first sentence of the source document to train the model, while researchers at Google and IBM use two sentences from the source with a limit of 120 words.
 However, summarization systems need to be able to deal with much longer documents.
 In the works described next, authors tried to address these issues by proposing various modifications to the standard sequence-to-sequence model.
 
-In their work, \cite{chen2016distraction} explore neural summarization technologies for new articles which contain thousands of words.
+In their work, \cite{chen2016distraction} explore neural summarization technologies for news articles which contain thousands of words.
 Researchers also base their model on the encoder-decoder framework, however, instead of focusing on attention to get the local context like most of the recent work does, they incorporate coverage mechanism, "distracting" the models to different parts of a document to avoid focusing on only one thing and get the full picture.
 The authors do not restrict the encoders' architectures to the standard RNN, but use bi-directional gated recurrent units (bi-GRUs) architecture for encoding and decoding.
 Without engineering any features, they train the models on two large datasets and test them on LCSTS corpus.
@@ -169,6 +167,11 @@ For sentence ranking, authors experiment with two ranking algorithms - Support V
 For sentence compression, which is the main focus of their work, they examine three different approaches to sentence-compression of their own design: rule-based, sequence-based and tree-based.
 Finally, in the post-processing step, coreference resolution and sentence ordering are performed.
 All of the proposed models show substantial improvement over pure extraction-based approaches for query-based MDS, with the best-performing system yielding an 11.02 ROUGE-2 score on the DUC 2006 dataset.
+
+In \cite{yousefi2017text} researchers presented methods of extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
+The presented approach is completely unsupervised and does not require queries for any stage of training.
+Smaller local vocabularies, comparing to other methods, allow to reduce the training and deployment computational costs and thus make the approach more suitable for implementation on mobile devices.
+The authors perform experiments on two email corpora designed for text summarization and observe results that are much better than those of other unsupervised extractive email summarization techniques and are comparable to the best supervised approaches.
 
 In \cite{litvak2017query} authors continued their earlier work \cite{litvak2015krimping} of applying the Minimum Description Length (MDL) principle for generic summarization by constructing a model where frequent word sets depend on the query.
 The idea behind the MDL principle is that regularities in data can be used for its compression and the best hypothesis to describe these regularities is the one that can compress the data the most.
