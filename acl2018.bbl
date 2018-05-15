@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{54}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Allan et~al.(2003)Allan, Wade, and Bolivar}]{allan2003retrieval}
@@ -24,6 +24,14 @@ Christopher~J Burges, Robert Ragno, and Quoc~V Le. 2007.
 \newblock Learning to rank with nonsmooth cost functions.
 \newblock In \emph{Advances in neural information processing systems}, pages
   193--200.
+
+\bibitem[{de~Chalendar et~al.(2017)de~Chalendar, Ferret et~al.}]{de2017taking}
+Ga{\"e}l de~Chalendar, Olivier Ferret, et~al. 2017.
+\newblock Taking into account inter-sentence similarity for update
+  summarization.
+\newblock In \emph{Proceedings of the Eighth International Joint Conference on
+  Natural Language Processing (Volume 2: Short Papers)}, volume~2, pages
+  204--209.
 
 \bibitem[{Chen et~al.(2016)Chen, Zhu, Ling, Wei, and
   Jiang}]{chen2016distraction}
@@ -69,6 +77,13 @@ Marcus~L. Endicott. 2017.
 \newblock 100 best github: Automatic summarization.
 \newblock
   \url{http://meta-guide.com/software-meta-guide/100-best-github-automatic-summarization}.
+
+\bibitem[{Gillick and Favre(2009)}]{gillick2009scalable}
+Dan Gillick and Benoit Favre. 2009.
+\newblock A scalable global model for summarization.
+\newblock In \emph{Proceedings of the Workshop on Integer Linear Programming
+  for Natural Langauge Processing}, pages 10--18. Association for Computational
+  Linguistics.
 
 \bibitem[{Gillick et~al.(2009)Gillick, Favre, Hakkani-T{\"u}r, Bohnet, Liu, and
   Xie}]{gillick2009icsi}
