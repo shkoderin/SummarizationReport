@@ -1,4 +1,4 @@
-\begin{thebibliography}{54}
+\begin{thebibliography}{55}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Allan et~al.(2003)Allan, Wade, and Bolivar}]{allan2003retrieval}
@@ -84,6 +84,12 @@ Dan Gillick and Benoit Favre. 2009.
 \newblock In \emph{Proceedings of the Workshop on Integer Linear Programming
   for Natural Langauge Processing}, pages 10--18. Association for Computational
   Linguistics.
+
+\bibitem[{Gillick et~al.(2008)Gillick, Favre, and
+  Hakkani-T{\"u}r}]{gillick2008icsi}
+Daniel Gillick, Benoit Favre, and Dilek Hakkani-T{\"u}r. 2008.
+\newblock The icsi summarization system at tac 2008.
+\newblock In \emph{TAC}.
 
 \bibitem[{Gillick et~al.(2009)Gillick, Favre, Hakkani-T{\"u}r, Bohnet, Liu, and
   Xie}]{gillick2009icsi}

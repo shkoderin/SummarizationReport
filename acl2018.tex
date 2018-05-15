@@ -81,7 +81,7 @@ The models can be trained on large scale datasets and learn informativeness feat
 The labels are assigned to each sentence in the document individually based on their semantic correspondence with the gold summary.
 The authors tested their approach on DailyMail and DUC 2002 datasets and demonstrated results that are comparable to the state of the art.
 
-\cite{nallapati2017summarunner} present a RNN-based sequence model for extractive single-document summarization  which they call SummaRuNNer.
+\cite{nallapati2017summarunner} present a Recurrent Neural Network (RNN) based sequence model for extractive single-document summarization  which they call SummaRuNNer.
 The approach is based on the idea of identifying the set of sentences which collectively give the highest ROUGE with respect to the gold summary.
 The model allows visualization of its predictions broken up by abstract features such as information content, salience and novelty, thus being very interpretable.
 Authors also present a novel training mechanism that allows the extractive model to be trained end-to-end using abstractive summaries.
@@ -102,9 +102,9 @@ GCN takes in sentence embeddings from Recurrent Neural Networks (RNN) as input n
 Sentence salience is then estimated through a regression on top and the important sentences are extracted in a greedy manner while avoiding redundancy.
 The model was evaluated on the DUC 2004 multi-document summarization (MDS) task, outperforming traditional graph-based extractive summarizers and the vanilla GRU sequence model with no graph, as well performing competitively to other state-of-the-art MDS approaches.
 
-Otherwise, in the past years there has not been any substantial advancements in extractive text summarization, most publications only proposed some improvements to the already long-existing extractive methods.
+Otherwise, in the past years there has not been any substantial advancements in extractive text summarization, most publications only propose some improvements to the already long-existing extractive methods.
 Researchers such as \cite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
-In the next section we provide an overview of the most recent advances in abstractive summarization methods.
+In the next section we provide an overview of the most recent advances in the area of abstractive summarization.
 
 \section{Abstractive methods} \label{abstractive}
 The goal of automatic text summarization systems is to produce summaries as good as the ones created by humans.
@@ -127,10 +127,10 @@ In addition to the paper, the source code \cite{Namas2015Facebook} was also prov
 
 In later work \cite{chopra2016abstractive} researchers at Facebook extended their model to a Recurrent Neural Network (RNN) architecture.
 The new model includes a more sophisticated encoder which explicitly encodes the position of the input words and uses convolutional network to encode input words.
-With these modifications, the model showed to significantly outperform the previously proposed system on the Gigaword corpus and perform competitively on the DUC-2004 task.
-Authors explain the distinctive improvement by the difference between tokenization of DUC-2004 and their training corpus, as well as by the fact that headlines in Gigaword are much shorter than in DUC-2004.
+With these modifications, the model showed to significantly outperform the previously proposed system on the Gigaword corpus and perform competitively on the DUC 2004 task.
+Authors explain the distinctive improvement by the difference between tokenization of DUC 2004 and their training corpus, as well as by the fact that headlines in Gigaword are much shorter than in DUC 2004.
 
-Researchers at IBM \cite{nallapati2016abstractive} modeled abstractive text summarization using attentional encoder-decoder recurrent neural networks.
+Later this year, researchers at IBM \cite{nallapati2016abstractive} also modeled abstractive text summarization using attentional encoder-decoder recurrent neural networks.
 To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
 One of the most interesting models is called "Switching Generator/Pointer". In this model, the decoder is equipped with a "switch" that decides between generating a new word based on the context or using a word from the input.
 In addition, in their work authors proposed a new dataset for multi sentence document summarization and established benchmark numbers on it.
@@ -161,6 +161,7 @@ The model was applied to the CNN/Daily Mail dataset, outperforming the results o
 Query-focused summarization became a task in DUC in 2004 in response to researchers' claims that generic summarization is too unconstrained and does not consider special user needs.
 The aim of such summarization is to generate a summary of a document or multiple documents in the context of a query.
 Such summarization allows to use more sophisticated, targeted approaches that integrate methods that seek specific types of information with data-driven, generic methods \cite{nenkova2011automatic}.
+Below we describe some of the most recent solutions to the problem of query-focused summarization.
 
 \cite{wang2016sentence} investigate the role of sentence compression techniques for query-focused multi-document summarization (MDS) and present a respective framework consisting of three steps: Sentence Ranking, Sentence Compression and Post-processing.
 For sentence ranking, authors experiment with two ranking algorithms - Support Vector Regression (SVR) \cite{mozer1997} and LambdaMART \cite{burges2007learning}.
@@ -168,7 +169,7 @@ For sentence compression, which is the main focus of their work, they examine th
 Finally, in the post-processing step, coreference resolution and sentence ordering are performed.
 All of the proposed models show substantial improvement over pure extraction-based approaches for query-based MDS, with the best-performing system yielding an 11.02 ROUGE-2 score on the DUC 2006 dataset.
 
-In \cite{yousefi2017text} researchers presented methods of extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
+In \cite{yousefi2017text} researchers presented methods for extractive query-oriented single-document summarization using a deep auto-encoder (AE) to compute a feature space from the term-frequency (tf) input.
 The presented approach is completely unsupervised and does not require queries for any stage of training.
 Smaller local vocabularies, comparing to other methods, allow to reduce the training and deployment computational costs and thus make the approach more suitable for implementation on mobile devices.
 The authors perform experiments on two email corpora designed for text summarization and observe results that are much better than those of other unsupervised extractive email summarization techniques and are comparable to the best supervised approaches.
@@ -190,7 +191,7 @@ Back in 2003, this task was approached by \cite{allan2003retrieval} who conclude
 From 2007 to 2011, while update summarization task was part of the DUC challenge, some advances were made in the field, however in the past few years a very limited research has been conducted on the topic.
 Therefore, in this section we cover some of the related work that has been done in the last 10 years.
 
-\cite{gillick2009icsi} improved on their earlier system, achieving top performance in 2009 TAC Summarization Task.
+\cite{gillick2009icsi} improved on their earlier system \cite{gillick2008icsi}, achieving top performance in 2009 TAC summarization task.
 Authors adapted their standard system to the update task by taking into account sentence position, more precisely, by assuming that articles on recurrent topics tend to state new information at the beginning, before recapping past details.
 This update showed to significantly improve ROUGE-2 scores.
 
@@ -200,10 +201,10 @@ The approach was tested on the TAC 2011 dataset and obtained second and third to
 
 \cite{li2015improving} adopt the supervised Integer Linear Programming (ILP) framework which has been widely used for generic summarization task in earlier years \cite{martins2009summarization, woodsend2012multiple} for the update summarization task.
 Authors make two major improvements: 1) a set of rich features are used to measure the importance and novelty of the bigram concepts used in the ILP model and 2) a sentence reranking component is designed which allows  to explicitly model a sentence’s importance and novelty.
-Authors evaluate their methods using several recent TAC data sets, from 2008 to 2011 using ROUGE.
+Authors evaluate their methods using several recent TAC data sets, from 2008 to 2011 using ROUGE, showing that both of their additions help to improve the update summarization performance.
 
-In one of the most recent works on update summarization \cite{de2017taking} extend the framework defined by \cite{gillick2009scalable} by integrating semantic sentence similarity for discarding redundancy in a maximal bigram coverage problem. 
-For evaluation of the idea, authors used DUC 2007, TAC 2008 and TAC 2009 update corpora using different ROUGE metrics and showed that their approach improves the update summarization performance.
+In one of the most recent works on update summarization \cite{de2017taking} extend the framework defined by \cite{gillick2009scalable} by integrating semantic sentence similarity for discarding redundancy in a maximal bigram coverage problem.
+For evaluation of the idea, authors used DUC 2007, TAC 2008 and TAC 2009 update corpora using different ROUGE metrics and showed that their approach noticeably improves the update summarization performance.
 
 \section{APIs}
 Service Kong Inc. (until October 2017 - Mashape, Inc.), which offers open-source platforms and cloud services to manage, monitor and scale APIs, as well as a marketplace for discovering and publishing them, provides a variety of summarization APIs and rates the following as the best:
@@ -261,6 +262,7 @@ For this evaluation, human reviewers are given a query and a summary and are ask
 
 \subsection{Automatic evaluation}
 Manual evaluations require a lot of time and effort, and are very expensive and difficult to conduct on a regular basis.
+Therefore, automatic evaluation measures became necessary.
 
 The most widely used automatic summarization evaluation measure for text summarization which is now standardly used to report results in research papers is called ROUGE (Recall-Oriented Understudy for Gisting Evaluation) \cite{lin2004rouge}.
 ROUGE was inspired by BLEU \cite{papineni2002bleu}, evaluation measure that was developed for machine translation evaluation.
@@ -270,7 +272,7 @@ ROUGE is cheap and fast, and, unlike BLEU, that is oriented at precision, which 
 There are several variations of ROUGE. Below we shortly describe the ones that are most commonly used.
 \begin{itemize}
 \item ROUGE-N is based on an n-gram recall between a candidate summary and a set of reference summaries, i.e. the score is computed as the ratio between the number of common n-grams and the number of n-grams only in the reference summary.
-\item ROUGE-L takes into account into account longest common subsequences to avoid the shortcoming of ROUGE-N when the measure may be based on sequences of text which are too small.
+\item ROUGE-L takes into account longest common subsequences to avoid the shortcoming of ROUGE-N when the measure may be based on sequences of text which are too small.
 Advantages of this metric are that it only requires in-sequence matches but not consecutive matches, automatically includes longest in-sequence common n-grams and takes into account sentence level structure in a natural way.
 \item ROUGE-SU is an extension of ROUGE-S which takes into account both bigrams and unigrams, thus avoiding assignment of 0 score to a sentence which does not share a skip bigram but instead has a common unigram.
 Correlation analysis results on DUC summarization data show that ROUGE-SU correlates the best with human judgements.
@@ -282,6 +284,7 @@ Motivated by this observation, \cite{cohan2016revisiting} conducted a detailed  
 In their results, ROUGE showed to be unreliable for evaluation of these types of summaries, with different ROUGE variations producing different correlations with the pyramid scores.
 The authors propose a new metric for summarization evaluation called SERA (Summarization Evaluation by Relevance Analysis), which is based on the content relevance between automatically generated summary and the corresponding manual summaries, written by human annotators.
 The newly proposed metric proved to be effective in evaluating summaries of scientific articles, consistently achieving hight correlations with manual scores.
+However, until this day ROUGE is still standardly used evaluation measure for assessment of automatic summarization systems.
 
 
 % include your own bib file like this:
