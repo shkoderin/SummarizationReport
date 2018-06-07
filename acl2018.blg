@@ -12,46 +12,48 @@ Warning--empty year in aylienapi
 Warning--empty year in indicoapi
 Warning--empty year in meaaningcloud2017api
 Warning--empty year in rougerepos
+Warning--empty year in sarikieffective
+Warning--empty journal in sarikieffective
 Warning--empty year in deepaiapi
-You've used 55 entries,
+You've used 71 entries,
             3573 wiz_defined-function locations,
-            967 strings with 15205 characters,
-and the built_in function-call counts, 37394 in all, are:
-= -- 3342
-> -- 1667
-< -- 47
-+ -- 535
-- -- 465
-* -- 2252
-:= -- 5567
-add.period$ -- 223
-call.type$ -- 55
-change.case$ -- 470
-chr.to.int$ -- 56
-cite$ -- 60
-duplicate$ -- 2554
-empty$ -- 2733
-format.name$ -- 630
-if$ -- 8281
+            1053 strings with 18663 characters,
+and the built_in function-call counts, 49240 in all, are:
+= -- 4445
+> -- 2122
+< -- 65
++ -- 684
+- -- 588
+* -- 2975
+:= -- 7225
+add.period$ -- 292
+call.type$ -- 71
+change.case$ -- 611
+chr.to.int$ -- 72
+cite$ -- 78
+duplicate$ -- 3382
+empty$ -- 3628
+format.name$ -- 817
+if$ -- 10947
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 485
-newline$ -- 278
-num.names$ -- 221
-pop$ -- 1175
+missing$ -- 642
+newline$ -- 357
+num.names$ -- 285
+pop$ -- 1551
 preamble$ -- 1
-purify$ -- 372
+purify$ -- 477
 quote$ -- 0
-skip$ -- 1928
+skip$ -- 2548
 stack$ -- 0
-substring$ -- 1363
-swap$ -- 1185
-text.length$ -- 21
+substring$ -- 1879
+swap$ -- 1605
+text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 495
-warning$ -- 5
-while$ -- 234
+type$ -- 639
+warning$ -- 7
+while$ -- 313
 width$ -- 0
-write$ -- 691
-(There were 5 warnings)
+write$ -- 900
+(There were 7 warnings)

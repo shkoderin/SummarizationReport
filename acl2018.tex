@@ -47,16 +47,22 @@
 \maketitle
 \begin{abstract}
 Automatic Text Summarization is the process of automatically reducing the original text document in order to create a summary of its essential content.
-Despite the progress in the area that has been achieved in over 50 years of the research in the topic, automatic summarization systems are still far from perfect, posing many challenges to the researchers in the field.
+Despite the progress in the area that has been achieved in over 50 years of the research on the topic, automatic summarization systems are still far from perfect, posing many challenges to the researchers in the field.
 This paper provides an overview of the most prominent algorithms for automatic summarization that were proposed in the last years, as well as describes automatic and manual evaluation methods that are currently widely used for quality assesment of automatic summarization systems.
 \end{abstract}
 
 
 \section{Introduction}
 With large amounts of text available online, the amount of which is growing rapidly everyday, summarizing this content becomes necessary to help users handle such information overload and better perceive information.
+Text summarization can be divided into two types: manual summarization and automatic summarization.
+Manual summarization is the process which includes creation of summaries manually by human experts, which is an extremely time consuming, difficult, expensive and stressful job for people to perform.
+Therefore, it became necessary to automate this task, to make it faster, cheaper and easily repeatable.
+
 Automatic summarization is the process of automatically shortening the content of an information source in a way that retains its most important information.
 The goal of summarizers is to produce concise and fluent summary which would allow people to understand the content of the input without reading the entire text.
 A good summary must be concise and fluent, capture all the important topics, but not contain repetitions of the same information.
+Automatic text summarization can be practically useful in many different domains.
+It can be used by companies for generation of reports, by students and scientists for finding most important ideas relevant to their research, by doctors for summarizing patients' medical informaion or by journalists for covering the variety of news resources, identifying main facts and different viewpoints.
 
 For a long time extractive techniques of text summarization have been the primary focus of research in the field.
 However, in the past years there have been less major advances in extractive text summarization.
@@ -81,15 +87,15 @@ The models can be trained on large scale datasets and learn informativeness feat
 The labels are assigned to each sentence in the document individually based on their semantic correspondence with the gold summary.
 The authors tested their approach on DailyMail and DUC 2002 datasets and demonstrated results that are comparable to the state of the art.
 
-\cite{nallapati2017summarunner} present a Recurrent Neural Network (RNN) based sequence model for extractive single-document summarization  which they call SummaRuNNer.
+\newcite{nallapati2017summarunner} present a Recurrent Neural Network (RNN) based sequence model for extractive single-document summarization  which they call SummaRuNNer.
 The approach is based on the idea of identifying the set of sentences which collectively give the highest ROUGE with respect to the gold summary.
 The model allows visualization of its predictions broken up by abstract features such as information content, salience and novelty, thus being very interpretable.
 Authors also present a novel training mechanism that allows the extractive model to be trained end-to-end using abstractive summaries.
-The approach was evaluated on three datasets: Daily Mail, joint CNN/DailyMail, originally collected by \cite{hermann2015teaching}, and Out-of-Domain DUC 2002 corpus.
+The approach was evaluated on three datasets: Daily Mail, joint CNN/DailyMail, originally collected by \newcite{hermann2015teaching}, and Out-of-Domain DUC 2002 corpus.
 Results on DailyMail corpus were compared to the ones of \cite{cheng2016neural} using Rouge recall with summary length restricted to 75 and 275 bytes.
 The extractively trained SummaRuNNer model showed significant improvement over the comparable model for summary length of 75 bytes, while performing comparably for summary length of 275 bytes.
 The abstractively trained SummaRuNNer model performed comparably for summary length of 75 bytes, while underperforming the comparable model for summary length of 275 bytes.
-On the joint CNN/Daily Mail corpus, SummaRuNNer significantly outperformed the abstractive model of \cite{nallapati2016abstractive}, which was the only work at the time, that reported performance on this dataset.
+On the joint CNN/Daily Mail corpus, SummaRuNNer significantly outperformed the abstractive model of \newcite{nallapati2016abstractive}, which was the only work at the time, that reported performance on this dataset.
 On the Out-of-Domain DUC 2002 corpus, SummaRuNNer was also on par with \cite{cheng2016neural}, however underperformed graph-based TGRAPH \cite{parveen2015topical} and URANK \cite{wan2010towards} algorithms that were state-of-the-art on this corpus at the time.
 
 In \cite{narayan2017neural} authors use an architecture similar to those in previous approaches, however, for sentence ranking, they introduce a global optimization framework, which combines the maximum-likelihood cross-entropy loss with rewards from policy gradient reinforcement learning to directly optimize the final evaluation metric, ROUGE.
@@ -97,24 +103,58 @@ A sentence gets a high rank for summary selection if it often occurs in high sco
 The model was applied to the CNN/Daily Mail dataset and automatically evaluated using ROUGE, outperforming both of the above extractive systems, which are considered to be state-of-the art, as well as the most prominent abstractive systems \cite{nallapati2016abstractive, chen2016distraction, see2017get}, discussed in the next section.
 Human evaluations showed that summaries, produced using this approach are also more informative and complete.
 
-\cite{yasunaga2017graph} propose a graph-based neural multi-document summarization (MDS) based on the application of Graph Convolutional Networks (GCN) \cite{kipf2016semi} on sentence relation graphs.
+\newcite{yasunaga2017graph} propose a graph-based neural multi-document summarization (MDS) based on the application of Graph Convolutional Networks (GCN) \cite{kipf2016semi} on sentence relation graphs.
 GCN takes in sentence embeddings from Recurrent Neural Networks (RNN) as input node features and through multiple layer-wise propagation generates high-level hidden features for the sentences.
 Sentence salience is then estimated through a regression on top and the important sentences are extracted in a greedy manner while avoiding redundancy.
 The model was evaluated on the DUC 2004 multi-document summarization (MDS) task, outperforming traditional graph-based extractive summarizers and the vanilla GRU sequence model with no graph, as well performing competitively to other state-of-the-art MDS approaches.
 
 Otherwise, in the past years there has not been any substantial advancements in extractive text summarization, most publications only propose some improvements to the already long-existing extractive methods.
-Researchers such as \cite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
+Researchers such as \newcite{mehta2016extractive} assume that extractive summarization methods may have achieved their peak and propose two possible research advancement options:  1) making ensembles of extractive methods and 2) focusing on abstractive techniques.
 In the next section we provide an overview of the most recent advances in the area of abstractive summarization.
 
 \section{Abstractive methods} \label{abstractive}
-The goal of automatic text summarization systems is to produce summaries as good as the ones created by humans.
-However, when people produce summaries, in order to make them optimal in terms of content and linguistic quality, they tend to edit the text rather than just copy sentences from it as they are.
+Simply selecting a subset of sentences from the original text, as done in extractive summarization, leads to various drawbacks such as problems with cohesion and coherence, caused by inability to combine important information that is spread throughout the document in a short way, loss of meaning due to the usage of out of context pronouns and many others.
+The goal of automatic text summarization systems however is to produce summaries as good as the ones created by humans.
+When people produce summaries, in order to make them optimal in terms of content and linguistic quality, they tend to edit the text rather than just copy sentences from it as they are.
+Simply selecting a subset of sentences from the original text leads to various drawbacks such as problems with cohesion and coherence, including inability to combine important information that is spread throughout the document in a short way, loss of meaning due to the usage of out of context pronouns and many others.
 This is why, in order to emulate this process, generation of abstractive summaries is necessary.
 Abstractive summarization methods produce summaries by rewriting the content in an input, as opposed to extractive methods that simply extract and concatenate important text units from it.
 Therefore, abstractive summarization requires a deeper semantic and discourse interpretation of the text, as well as a novel text generation process.
 
+\newcite{carenini2008extractive} perform a user study comparing extractive and abstractive summarizers called MEAD* and SEA respectively.
+Table \ref{table:comparison}, adopted from their work, provides an illustrative example of the core difference between summaries generated using extractive and abstractive techniques.
+While the extractive summarizer simply copied the original sentences from user reviews from the corpus, with the numbers within the summary being footnotes linking to the corresponding review, the abstractive method produced a fluent, coherent text, summarizing the overall feedback from the users.
+\begin{table*}[ht]
+\caption{Comparison of extractive and abstractive summarization}
+\label{table:comparison}
+\centering
+\begin{tabular}{p{0.5\linewidth}p{0.5\linewidth}}
+\hline
+\textbf{Abstractive (SEA)} & \textbf{Extractive (MEAD*)}\\
+\hline
+Customers had mixed opinions about the Apex AD2600 1,2
+possibly because users were divided on the range of compatible
+disc formats 3,4 and there was disagreement among the users
+about the video output 5,6. However, users did agree on some
+things. Some purchasers found the extra features 7 to be very
+good and some customers really liked the surround sound support
+8 and thought the user interface 9 was poor.
+&
+When we tried to hook up the first one , it was broken - the
+motor would not eject discs or close the door . 1 The build
+quality feels solid , it does n't shake or whine while playing
+discs , and the picture and sound is top notch ( both dts and
+dd5.1 sound good ) . 2 The progressive scan option can be
+turned off easily by a button on the remote control which is
+one of the simplest and easiest remote controls i have ever
+seen or used . 3 It plays original dvds and cds and plays
+mp3s and jpegs . 4 \\
+\hline
+\end{tabular}
+\end{table*}
+
 Very recently, there have been several breakthroughs in abstractive text summarization using deep learning.
-Most of the research relies on Sequence to Sequence Model \cite{sutskever2014sequence}, which was first introduced as Encoder-Decoder Model by \cite{cho2014learning} and later extended by \cite{bahdanau2014neural} with so-called "attention mechanism".
+Most of the research relies on Sequence to Sequence Model \cite{sutskever2014sequence}, which was first introduced as Encoder-Decoder Model by \newcite{cho2014learning} and later extended by \newcite{bahdanau2014neural} with so-called "attention mechanism".
 Encoder encodes source sequence into a context vector, while decoder decodes context vector to produce a target sequence. Attention mechanism is used to locate the focus region  during decoding.
 Sequence to Sequence (or seq2seq) model manages text generation pretty well as it was originally developed for machine translation.
 
@@ -134,7 +174,7 @@ Later this year, researchers at IBM \cite{nallapati2016abstractive} also modeled
 To address specific problems in abstractive summarization that are not sufficiently covered by the machine translation based model, they proposed several novel models, yielding further improvement in performance.
 One of the most interesting models is called "Switching Generator/Pointer". In this model, the decoder is equipped with a "switch" that decides between generating a new word based on the context or using a word from the input.
 In addition, in their work authors proposed a new dataset for multi sentence document summarization and established benchmark numbers on it.
-The proposed summarization approach showed to significantly outperform the ones of \cite{rush2015neural} and \cite{chopra2016abstractive} and exhibit better abstractive ability.
+The proposed summarization approach showed to significantly outperform the ones of \newcite{rush2015neural} and \newcite{chopra2016abstractive} and exhibit better abstractive ability.
 Authors believe that their superior performance in comparison to the above methods was reached by using bidirectional RNN instead of the bag-of-embeddings representation to model the source, as this approach captures richer contextual information of every word.
 
 Google has also proposed a sequence-to-sequence with attention model for text summarization, which they called "textsum".
@@ -145,17 +185,17 @@ Researchers at Facebook use only the first sentence of the source document to tr
 However, summarization systems need to be able to deal with much longer documents.
 In the works described next, authors tried to address these issues by proposing various modifications to the standard sequence-to-sequence model.
 
-In their work, \cite{chen2016distraction} explore neural summarization technologies for news articles which contain thousands of words.
+In their work, \newcite{chen2016distraction} explore neural summarization technologies for news articles which contain thousands of words.
 Researchers also base their model on the encoder-decoder framework, however, instead of focusing on attention to get the local context like most of the recent work does, they incorporate coverage mechanism, "distracting" the models to different parts of a document to avoid focusing on only one thing and get the full picture.
 The authors do not restrict the encoders' architectures to the standard RNN, but use bi-directional gated recurrent units (bi-GRUs) architecture for encoding and decoding.
 Without engineering any features, they train the models on two large datasets and test them on LCSTS corpus.
-The proposed approach achieved better performance than the best result reported in \cite{hu2015lcsts}, which the authors used as a baseline.
+The proposed approach achieved better performance than the best result reported in \cite{hu2015lcsts}, which the authors used for comparison.
 
-\cite{see2017get} propose a novel architecture that enhances the standard sequence-to-sequence attentional model by using a hybrid pointer-to-pointer generator network and the coverage mechanism.
-The proposed hybrid network is similar to the ones proposed for short-text summarization by \cite{gu2016incorporating} and \cite{miao2016language}.
+\newcite{see2017get} propose a novel architecture that enhances the standard sequence-to-sequence attentional model by using a hybrid pointer-to-pointer generator network and the coverage mechanism.
+The proposed hybrid network is similar to the ones proposed for short-text summarization by \newcite{gu2016incorporating} and \newcite{miao2016language}.
 It uses pointing \cite{vinyals2015pointer} to copy words from the input text, which provides better accuracy and is better in dealing with OOV words, while retaining the ability to generate new words.
-To ensure coverage of the input document and thus reduce repetitions in the summary, authors propose a new version of the coverage vector by adapting the model of \cite{tu2016modeling}.
-The model was applied to the CNN/Daily Mail dataset, outperforming the results of \cite{nallapati2016abstractive} by several ROUGE points.
+To ensure coverage of the input document and thus reduce repetitions in the summary, authors propose a new version of the coverage vector by adapting the model of \newcite{tu2016modeling}.
+The model was applied to the CNN/Daily Mail dataset, outperforming the results of \newcite{nallapati2016abstractive} by several ROUGE points.
 
 \section{Query-focused summarization}
 Query-focused summarization became a task in DUC in 2004 in response to researchers' claims that generic summarization is too unconstrained and does not consider special user needs.
@@ -163,7 +203,7 @@ The aim of such summarization is to generate a summary of a document or multiple
 Such summarization allows to use more sophisticated, targeted approaches that integrate methods that seek specific types of information with data-driven, generic methods \cite{nenkova2011automatic}.
 Below we describe some of the most recent solutions to the problem of query-focused summarization.
 
-\cite{wang2016sentence} investigate the role of sentence compression techniques for query-focused multi-document summarization (MDS) and present a respective framework consisting of three steps: Sentence Ranking, Sentence Compression and Post-processing.
+\newcite{wang2016sentence} investigate the role of sentence compression techniques for query-focused multi-document summarization (MDS) and present a respective framework consisting of three steps: Sentence Ranking, Sentence Compression and Post-processing.
 For sentence ranking, authors experiment with two ranking algorithms - Support Vector Regression (SVR) \cite{mozer1997} and LambdaMART \cite{burges2007learning}.
 For sentence compression, which is the main focus of their work, they examine three different approaches to sentence-compression of their own design: rule-based, sequence-based and tree-based.
 Finally, in the post-processing step, coreference resolution and sentence ordering are performed.
@@ -180,31 +220,63 @@ In the proposed approach, authors select frequent word sets that lead to the bes
 The extracted summary consist of sentences that provide the best coverage of query-related frequent word sets.
 The summarization approach was evaluated using ROUGE-1 based on the DUC 2005 and DUC 2006 corpora that were specifically designed for query-based summarization and has shown to perform competitively with the best results.
 
-The highly successful Encoder-Decoder Model that was discussed in Section \ref{abstractive} was recently adapted to the query-based summarization by \cite{nema2017diversity}.
+The highly successful Encoder-Decoder Model that was discussed in Section \ref{abstractive} was recently adapted to the query-based summarization by \newcite{nema2017diversity}.
 The authors present a model for abstractive query-based summarization based on the encode-attend-decode paradigm with two additions: (1) a query attention model which learns to concentrate on different parts of the query at different points in time, and (2) a new diversity based attention model which aims to mitigate the drawback of generating repeated phrases in the summary.
 The authors also introduced a new dataset based on debatepedia and empirically proved that their approach performs significantly better than the plain (vanilla) encode-attend-decode mechanism, gaining 28\% in ROUGE-L score, and thus outperforming the previously proposed models.
 
 \section{Update summarization}
 Update summarization is a MDS task of creating a summary under the assumption that the reader is already familiar with the content of older relevant documents.
 The purpose of an update summary is thus to inform the user about the new relevant information on a particular topic.
-Back in 2003, this task was approached by \cite{allan2003retrieval} who concluded it to be a hardly feasible challenge.
+Back in 2003, this task was approached by \newcite{allan2003retrieval} who concluded it to be a hardly feasible challenge.
 From 2007 to 2011, while update summarization task was part of the DUC challenge, some advances were made in the field, however in the past few years a very limited research has been conducted on the topic.
 Therefore, in this section we cover some of the related work that has been done in the last 10 years.
 
-\cite{gillick2009icsi} improved on their earlier system \cite{gillick2008icsi}, achieving top performance in 2009 TAC summarization task.
+\newcite{gillick2009icsi} improved on their earlier system \cite{gillick2008icsi}, achieving top performance in 2009 TAC summarization task.
 Authors adapted their standard system to the update task by taking into account sentence position, more precisely, by assuming that articles on recurrent topics tend to state new information at the beginning, before recapping past details.
 This update showed to significantly improve ROUGE-2 scores.
 
-Three years later, \cite{delort2012dualsum} proposed a new unsupervised nonparametric Bayesian approach to model novelty in a document.
+Three years later, \newcite{delort2012dualsum} proposed a new unsupervised nonparametric Bayesian approach to model novelty in a document.
 The model, which is a modification of TopicSum and is called DualSum, is a variant of Latent Dirichlet Allocation (LDA) and learns to distinguish between common information and novel information.
 The approach was tested on the TAC 2011 dataset and obtained second and third top positions according to different ROUGE scores.
 
-\cite{li2015improving} adopt the supervised Integer Linear Programming (ILP) framework which has been widely used for generic summarization task in earlier years \cite{martins2009summarization, woodsend2012multiple} for the update summarization task.
+\newcite{li2015improving} adopt the supervised Integer Linear Programming (ILP) framework which has been widely used for generic summarization task in earlier years \cite{martins2009summarization, woodsend2012multiple} for the update summarization task.
 Authors make two major improvements: 1) a set of rich features are used to measure the importance and novelty of the bigram concepts used in the ILP model and 2) a sentence reranking component is designed which allows  to explicitly model a sentence’s importance and novelty.
 Authors evaluate their methods using several recent TAC data sets, from 2008 to 2011 using ROUGE, showing that both of their additions help to improve the update summarization performance.
 
-In one of the most recent works on update summarization \cite{de2017taking} extend the framework defined by \cite{gillick2009scalable} by integrating semantic sentence similarity for discarding redundancy in a maximal bigram coverage problem.
+In one of the most recent works on update summarization, \newcite{de2017taking} extend the framework defined by \newcite{gillick2009scalable} by integrating semantic sentence similarity for discarding redundancy in a maximal bigram coverage problem.
 For evaluation of the idea, authors used DUC 2007, TAC 2008 and TAC 2009 update corpora using different ROUGE metrics and showed that their approach noticeably improves the update summarization performance.
+
+In TAC 2011 task, update summarization became a part of the guided summarization task, which was supposed to motivate researchers to work more on abstractive approaches.
+For this new task, \newcite{genest2012fully} proposed a fully abstractive approach based on information extraction and natural language generation.
+
+\section{Summarization of scientific texts}
+The ever-increasing rate at which scientific articles are being published makes it difficult for scientists to stay up-to-date with advancements related to their research topics.
+Summarization of scientific articles addresses this issue by providing researchers with the opportunity to easily obtain an overview of the important findings and contributions in their respective fields.
+This section desribes some of the latest works, published on this topic.
+
+\newcite{jha2013system} proposed an approach for summarizing scientific topics starting from keywords provided by a user.
+The system takes a topic query as input and generates a survey of the topic by first selecting a set of relevant documents, and then selecting relevant sentences from those documents.
+Authors manually annotated data set for performance evaluation.
+They collected 47 gold standard documents (surveys and tutorials) on seven topics in Natural Language Processing
+and extracted factoids for each topic.
+Each factoid was given an importance score based on the number of gold standard documents it appears in.
+Additionally, they manually annotated 2,625 input sentences, around 375 sentences per topic, with the
+factoids extracted from the gold standard documents for each topic.
+Using this corpus, they presented experimental results for the performance of their document selection component and three sentence selection strategies.
+
+\newcite{collins2017supervised} introduced a new dataset consisting of more than 10.000 computer science papers which can be automatically extended to an additional 26 domains using HighlightROUGE method and used for both abstractive and extractive summarization.
+Using the combination of traditional summarization features and neural sentence encoding, researchers develop models on this dataset, achieving the best performance by encoding sentences as well as their local and global context.
+They also demonstrate that reading a sentence sequentially is superior to averaging its word vectors and that high accuracy on an automatically generated test set does not guarantee a high ROUGE-L score on a gold test set.
+Additionally, authors also introduced a new metric, AbstractROUGE, which has showed to further increase summarization performance based only on feature engineering.
+
+\newcite{cohan2017scientific} proposed an approach for summarization of scientific articles which exploits citation-context and the document discourse model.
+The proposed method overcomes the problem of inconsistency between the citation summary and the article’s content by extracting citation-context in the reference article for each citation.
+The final summary is formed by maximizing both novelty and informativeness of the sentences in the summary.
+
+The task of automatic summarization of scientific articles has branched off into the task of automatic generation of presentation slides for such articles.
+This task is even more complex as it requires not only identifying the most important content, but also arranging it in clear and systematic way.
+In addition to text summarization, for which automated slide generators mostly exploit the structure similarity in all scientific articles, such systems must also be able to add relevant images and tables to the final slides.
+In their work, \newcite{dais2015comparison} provide an overview of techniques that are addressing this task, including approaches based on inference of underlying semantic structure of articles \cite{masao1999automatic}, Natural Language Processing \cite{shibata2005automatic, prasad2009document}, Text Summarization \cite{sarikieffective}, LATEX manuscripts of articles \cite{yasumura2003support, sravanthi2009slidesgen}, web mining \cite{al2005auto, masum2006making} and  machine learning \cite{hu2013ppsgen}.
 
 \section{APIs}
 Service Kong Inc. (until October 2017 - Mashape, Inc.), which offers open-source platforms and cloud services to manage, monitor and scale APIs, as well as a marketplace for discovering and publishing them, provides a variety of summarization APIs and rates the following as the best:
@@ -246,7 +318,11 @@ The features are multilingual, allowing to analyze text in multiple languages in
 The API does not provide automatic summarization functionality, however can obtain information, valuable for this task, such as sailence field in the analyzeEntities method or dependencyEdge fields in the analyzeSyntax method.
 The price for consuming the API depends on the features used and is calculated per 1.000 units by monthly usage.
 
-\section{Evaluation methods}
+
+\section{Evaluation methods} \label{evaluation}
+With more and more different approaches to automatic summarization emerging, methods to compare and evaluate their performance are necessary.
+Evaluation process can be either intrinsic or extrinsic.
+Intrinsic evaluation tests the quality of summarization itself, e.g. its informativeness and coherence, while extrinsic evaluation checks the effectiveness of a summary for another task, for example, answering a query.
 In this section we provide an overview of the main evaluation methods that are currently used to assess and report results on automatic summarization.
 
 \subsection{Manual evaluation}
@@ -260,9 +336,12 @@ The Pyramid score, which ranges from 0 to 1 and represents the informativeness o
 The Responsiveness metric is defined for query focused summarization.
 For this evaluation, human reviewers are given a query and a summary and are asked to rate on a scale from 1 to 5 how good the summary is in terms of providing the requested information.
 
-\subsection{Automatic evaluation}
+\subsection{Automatic evaluation} \label{automatic_evaluation}
 Manual evaluations require a lot of time and effort, and are very expensive and difficult to conduct on a regular basis.
-Therefore, automatic evaluation measures became necessary.
+Moreover, human summaries are very variable, i.e. different people choose different sentences for extractive summaries and all the more compose different abstractive summaries.
+This has been proven by several early studies such as \cite{rath1961formation} which have showed not only the low agreement rate between different judges, but also that even the same judge may produce a significantly different extract when asked to summarize the same document eight weeks later.
+Therefore, the results, obtained using manual evaluation can be subjective and difficult to reproduce.
+To address these problems, automatic methods for evaluation of summaries have been proposed.
 
 The most widely used automatic summarization evaluation measure for text summarization which is now standardly used to report results in research papers is called ROUGE (Recall-Oriented Understudy for Gisting Evaluation) \cite{lin2004rouge}.
 ROUGE was inspired by BLEU \cite{papineni2002bleu}, evaluation measure that was developed for machine translation evaluation.
@@ -280,12 +359,20 @@ Correlation analysis results on DUC summarization data show that ROUGE-SU correl
 All variations of ROUGE can be downloaded from a GutHub repository \cite{rougerepos}.
 
 One of the main problems of ROUGE is that it relies purely on lexical overlaps, which can significantly underrate summarization score, especially in documents that have a lot of synonyms, terminology variations and paraphrasing.
-Motivated by this observation, \cite{cohan2016revisiting} conducted a detailed  analysis of ROUGE’s effectiveness for evaluation of scientific summaries.
+Motivated by this observation, \newcite{cohan2016revisiting} conducted a detailed  analysis of ROUGE’s effectiveness for evaluation of scientific summaries.
 In their results, ROUGE showed to be unreliable for evaluation of these types of summaries, with different ROUGE variations producing different correlations with the pyramid scores.
 The authors propose a new metric for summarization evaluation called SERA (Summarization Evaluation by Relevance Analysis), which is based on the content relevance between automatically generated summary and the corresponding manual summaries, written by human annotators.
 The newly proposed metric proved to be effective in evaluating summaries of scientific articles, consistently achieving hight correlations with manual scores.
 However, until this day ROUGE is still standardly used evaluation measure for assessment of automatic summarization systems.
 
+\section{Conclusion}
+With the development of natural language processing and data collection and analysis opportunities, a significant progress was made in the field of automatic text summarization in the last years.
+While many researchers still center their work around improving extractive summarization, many shift their focus to abstractive techniques, very recently having several major breakthroughs in the area.
+However, despite all the research in the field of automatic summarization, current summarizers are still far from perfect and many challenges still remain unsolved. For example, RNN encoder-decoder structures, which are currently considered to be state-of-the art, still fail to encode long documents.
+Many of the current summarizers are still based on identifying frequent word sequences with no semantic processing, which is an especially noticeable problem when it comes to query-focused or guided summarization, which requires "understanding" of the documents.
+Advancements in this direction could help to eventually  produce highly personalised, interactive summaries, tailored to the specific user needs.
+Furthermore, the field is strongly lacking quality summarization datasets, especially in domains other than news and languages other than English, which slows down and complicates further advancements.
+Finally, there is also a need in improving methods for evaluation of automatic summarization  systems because, as discussed in Section \ref{automatic_evaluation},  standardly used metric ROUGE is far from perfect in many aspects and with the development of more advanced, focused summaries, the need for more consistent evaluation methods will become essential.
 
 % include your own bib file like this:
 %\bibliographystyle{acl}

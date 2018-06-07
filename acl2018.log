@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.9)  15 MAY 2018 12:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.9)  7 JUN 2018 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -243,68 +243,82 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 47.
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \vbox (badness 2547) has occurred while \output is active []
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 131.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 133.
 
- [2] [3] [4]
+Underfull \hbox (badness 1163) in paragraph at lines 135--142
+[]\OT1/ptm/m/n/10.95 Customers had mixed opin-ions about the Apex
+ []
+
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 131--154
+ [][] 
+ []
+
+[3] [4] [5]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 212.
+ [6]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 284.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 212.
- [5]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 284.
+ [7]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
- [6]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 252.
+ [8]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [7] (./acl2018.bbl
+ [9] (./acl2018.bbl
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 14.
+(Font)              <7> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 14.
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+(Font)              <5> on input line 21.
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 143--146
 []\OT1/ptm/m/n/10 Google. 2017.  Google cloud nat-u-ral lan-guage rest api.  [][]$\OT1/pcr/m/n/10 https : / / cloud . google . com /
  []
 
-[8]
+[11]
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 238.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 304.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 238.
- [9])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
- [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 304.
+ [12])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 387.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 387.
  (./acl2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 387.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 387.
 Package rerunfilecheck Info: File `acl2018.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 387.
  )
 (\end occurred when \iffalse on line 349 was incomplete) 
 Here is how much of TeX's memory you used:
- 6027 strings out of 492995
- 88849 string characters out of 6132705
- 179063 words of memory out of 5000000
- 9467 multiletter control sequences out of 15000+600000
- 22559 words of font info for 53 fonts, out of 8000000 for 9000
+ 6105 strings out of 492995
+ 90578 string characters out of 6132705
+ 180028 words of memory out of 5000000
+ 9523 multiletter control sequences out of 15000+600000
+ 23024 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,8n,37p,392b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,11n,37p,550b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on acl2018.pdf (10 pages, 113307 bytes).
+Output written on acl2018.pdf (13 pages, 128698 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 76 named destinations out of 1000 (max. 500000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

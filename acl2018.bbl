@@ -1,5 +1,12 @@
-\begin{thebibliography}{55}
+\begin{thebibliography}{71}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Al~Masum et~al.(2005)Al~Masum, Ishizuka, and Islam}]{al2005auto}
+Shaikh~Mostafa Al~Masum, Mitsuru Ishizuka, and Md~Tawhidul Islam. 2005.
+\newblock 'auto-presentation': a multi-agent system for building automatic
+  multi-modal presentation of a topic from world wide web information.
+\newblock In \emph{Intelligent Agent Technology, IEEE/WIC/ACM International
+  Conference on}, pages 246--249. IEEE.
 
 \bibitem[{Allan et~al.(2003)Allan, Wade, and Bolivar}]{allan2003retrieval}
 James Allan, Courtney Wade, and Alvaro Bolivar. 2003.
@@ -24,6 +31,14 @@ Christopher~J Burges, Robert Ragno, and Quoc~V Le. 2007.
 \newblock Learning to rank with nonsmooth cost functions.
 \newblock In \emph{Advances in neural information processing systems}, pages
   193--200.
+
+\bibitem[{Carenini and Cheung(2008)}]{carenini2008extractive}
+Giuseppe Carenini and Jackie Chi~Kit Cheung. 2008.
+\newblock Extractive vs. nlg-based abstractive summarization of evaluative
+  text: The effect of corpus controversiality.
+\newblock In \emph{Proceedings of the Fifth International Natural Language
+  Generation Conference}, pages 33--41. Association for Computational
+  Linguistics.
 
 \bibitem[{de~Chalendar et~al.(2017)de~Chalendar, Ferret et~al.}]{de2017taking}
 Ga{\"e}l de~Chalendar, Olivier Ferret, et~al. 2017.
@@ -65,6 +80,25 @@ Arman Cohan and Nazli Goharian. 2016.
 \newblock Revisiting summarization evaluation for scientific articles.
 \newblock \emph{arXiv preprint arXiv:1604.00400}.
 
+\bibitem[{Cohan and Goharian(2017)}]{cohan2017scientific}
+Arman Cohan and Nazli Goharian. 2017.
+\newblock Scientific article summarization using citation-context and article's
+  discourse structure.
+\newblock \emph{arXiv preprint arXiv:1704.06619}.
+
+\bibitem[{Collins et~al.(2017)Collins, Augenstein, and
+  Riedel}]{collins2017supervised}
+Ed~Collins, Isabelle Augenstein, and Sebastian Riedel. 2017.
+\newblock A supervised approach to extractive summarisation of scientific
+  papers.
+\newblock \emph{arXiv preprint arXiv:1706.03946}.
+
+\bibitem[{Dais and Smitha(2015)}]{dais2015comparison}
+Biju~P Dais and CS~Smitha. 2015.
+\newblock A comparison on techniques for automatic generation of presentation
+  slides.
+\newblock \emph{International Journal of Computer Applications}, 131(17).
+
 \bibitem[{Delort and Alfonseca(2012)}]{delort2012dualsum}
 Jean-Yves Delort and Enrique Alfonseca. 2012.
 \newblock Dualsum: a topic-model based approach for update summarization.
@@ -77,6 +111,13 @@ Marcus~L. Endicott. 2017.
 \newblock 100 best github: Automatic summarization.
 \newblock
   \url{http://meta-guide.com/software-meta-guide/100-best-github-automatic-summarization}.
+
+\bibitem[{Genest and Lapalme(2012)}]{genest2012fully}
+Pierre-Etienne Genest and Guy Lapalme. 2012.
+\newblock Fully abstractive approach to guided summarization.
+\newblock In \emph{Proceedings of the 50th Annual Meeting of the Association
+  for Computational Linguistics: Short Papers-Volume 2}, pages 354--358.
+  Association for Computational Linguistics.
 
 \bibitem[{Gillick and Favre(2009)}]{gillick2009scalable}
 Dan Gillick and Benoit Favre. 2009.
@@ -121,10 +162,22 @@ Baotian Hu, Qingcai Chen, and Fangze Zhu. 2015.
 \newblock Lcsts: A large scale chinese short text summarization dataset.
 \newblock \emph{arXiv preprint arXiv:1506.05865}.
 
+\bibitem[{Hu and Wan(2013)}]{hu2013ppsgen}
+Yue Hu and Xiaojun Wan. 2013.
+\newblock Ppsgen: Learning to generate presentation slides for academic papers.
+\newblock In \emph{IJCAI}, pages 2099--2105.
+
 \bibitem[{Indico()}]{indicoapi}
 Indico.
 \newblock Indico.
 \newblock \url{https://indico.io/}.
+
+\bibitem[{Jha et~al.(2013)Jha, Abu-Jbara, and Radev}]{jha2013system}
+Rahul Jha, Amjad Abu-Jbara, and Dragomir Radev. 2013.
+\newblock A system for summarizing scientific topics starting from keywords.
+\newblock In \emph{Proceedings of the 51st Annual Meeting of the Association
+  for Computational Linguistics (Volume 2: Short Papers)}, volume~2, pages
+  572--577.
 
 \bibitem[{Kipf and Welling(2016)}]{kipf2016semi}
 Thomas~N Kipf and Max Welling. 2016.
@@ -180,6 +233,19 @@ Andr{\'e}~FT Martins and Noah~A Smith. 2009.
 \newblock In \emph{Proceedings of the Workshop on Integer Linear Programming
   for Natural Langauge Processing}, pages 1--9. Association for Computational
   Linguistics.
+
+\bibitem[{Masao and K{\^o}iti(1999)}]{masao1999automatic}
+Utiyama Masao and Hasida K{\^o}iti. 1999.
+\newblock Automatic slide presentation from semantically annotated documents.
+\newblock In \emph{Proceedings of the Workshop on Coreference and its
+  Applications}, pages 25--30. Association for Computational Linguistics.
+
+\bibitem[{Masum and Ishizuka(2006)}]{masum2006making}
+Shaikh Mostafa~Al Masum and Mitsuru Ishizuka. 2006.
+\newblock Making topic-specific report and multimodal presentation
+  automatically by mining the web resources.
+\newblock In \emph{Proceedings of the 2006 IEEE/WIC/ACM International
+  Conference on Web Intelligence}, pages 240--246. IEEE Computer Society.
 
 \bibitem[{MeaningCloud()}]{meaaningcloud2017api}
 MeaningCloud.
@@ -259,6 +325,22 @@ Daraksha Parveen, Hans-Martin Ramsl, and Michael Strube. 2015.
 \newblock In \emph{Proceedings of the 2015 Conference on Empirical Methods in
   Natural Language Processing}, pages 1949--1954.
 
+\bibitem[{Prasad et~al.(2009)Prasad, Mathivanan, Greetha, and
+  Jayaprakasam}]{prasad2009document}
+K~Gokul Prasad, Harish Mathivanan, TV~Greetha, and M~Jayaprakasam. 2009.
+\newblock Document summarization and information extraction for generation of
+  presentation slides.
+\newblock In \emph{Advances in Recent Technologies in Communication and
+  Computing, 2009. ARTCom'09. International Conference on}, pages 126--128.
+  IEEE.
+
+\bibitem[{Rath et~al.(1961)Rath, Resnick, and Savage}]{rath1961formation}
+GJ~Rath, A~Resnick, and TR~Savage. 1961.
+\newblock The formation of abstracts by the selection of sentences. part i.
+  sentence selection by men and machines.
+\newblock \emph{Journal of the Association for Information Science and
+  Technology}, 12(2):139--141.
+
 \bibitem[{Rush et~al.(2015{\natexlab{a}})Rush, Chopra, and
   Weston}]{rush2015neural}
 Alexander~M Rush, Sumit Chopra, and Jason Weston. 2015{\natexlab{a}}.
@@ -282,10 +364,27 @@ Horacio Saggion and Thierry Poibeau. 2013.
 \newblock In \emph{Multi-source, multilingual information extraction and
   summarization}, pages 3--21. Springer.
 
+\bibitem[{Sariki et~al.()Sariki, Kumar, and Ragala}]{sarikieffective}
+Tulasi~Prasad Sariki, Bharadwaja Kumar, and Ramesh Ragala.
+\newblock Effective classroom presentation generation using text summarization.
+
 \bibitem[{See et~al.(2017)See, Liu, and Manning}]{see2017get}
 Abigail See, Peter~J Liu, and Christopher~D Manning. 2017.
 \newblock Get to the point: Summarization with pointer-generator networks.
 \newblock \emph{arXiv preprint arXiv:1704.04368}.
+
+\bibitem[{Shibata and Kurohashi(2005)}]{shibata2005automatic}
+Tomohide Shibata and Sadao Kurohashi. 2005.
+\newblock Automatic slide generation based on discourse structure analysis.
+\newblock In \emph{International Conference on Natural Language Processing},
+  pages 754--766. Springer.
+
+\bibitem[{Sravanthi et~al.(2009)Sravanthi, Chowdary, and
+  Kumar}]{sravanthi2009slidesgen}
+M~Sravanthi, C~Ravindranath Chowdary, and P~Sreenivasa Kumar. 2009.
+\newblock Slidesgen: Automatic generation of presentation slides for a
+  technical paper using summarization.
+\newblock In \emph{FLAIRS Conference}.
 
 \bibitem[{SummaNLP()}]{deepaiapi}
 SummaNLP.
@@ -333,6 +432,13 @@ Kristian Woodsend and Mirella Lapata. 2012.
 \newblock In \emph{Proceedings of the 2012 Joint Conference on Empirical
   Methods in Natural Language Processing and Computational Natural Language
   Learning}, pages 233--243. Association for Computational Linguistics.
+
+\bibitem[{Yasumura et~al.(2003)Yasumura, Takeichi, and
+  Nitta}]{yasumura2003support}
+Yoshiaki Yasumura, Masashi Takeichi, and Katsumi Nitta. 2003.
+\newblock A support system for making presentation slides.
+\newblock \emph{Transactions of the Japanese Society for Artificial
+  Intelligence}, 18(4):212--220.
 
 \bibitem[{Yasunaga et~al.(2017)Yasunaga, Zhang, Meelu, Pareek, Srinivasan, and
   Radev}]{yasunaga2017graph}
